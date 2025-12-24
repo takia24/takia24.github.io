@@ -39,6 +39,28 @@ nav button {
   cursor: pointer;
   font-size: 1rem;
 }
+/* Navbar text color - Light mode */
+nav a,
+nav button {
+  color: #ffffff;
+}
+
+/* Light mode specific fix */
+body:not(.dark) nav a,
+body:not(.dark) nav button {
+  color: #0f172a; /* dark readable text */
+}
+
+/* Dark mode navbar */
+.dark nav {
+  background: #0f172a;
+}
+
+.dark nav a,
+.dark nav button {
+  color: #ffffff;
+}
+
 
 /* ---------- HEADER ---------- */
 header {
@@ -173,4 +195,3 @@ footer button {
     gap: 10px;
   }
 }
-
