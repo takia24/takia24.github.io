@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Takia Yasmin | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Takia Yasmin</h1>
+    <p>B.Sc. in Internet of Things & Robotics Engineering</p>
+    <p>University of Frontier Technology, Bangladesh</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am an IoT and Embedded Systems enthusiast with hands-on experience in
+      Arduino, ESP8266/ESP32, sensor-based systems, and MQTT-based communication.
+      I enjoy building practical smart systems and maintaining clean project documentation.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Arduino Programming</li>
+      <li>ESP8266 / ESP32</li>
+      <li>Internet of Things (IoT)</li>
+      <li>MQTT Protocol</li>
+      <li>Sensors & Actuators</li>
+      <li>Embedded Systems</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Selected Projects</h2>
+
+    <div class="project">
+      <h3>IoT-Based Environmental Monitoring System</h3>
+      <p>ESP8266, DHT22, MQ2/MQ135, OLED Display</p>
+      <a href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+
+    <div class="project">
+      <h3>IoT-Based Motion Detection System</h3>
+      <p>ESP8266, PIR Sensor, MQTT</p>
+      <a href="https://github.com/takia24/IoT-Based-Motion-Detection-ESP8266" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+
+    <div class="project">
+      <h3>Obstacle Avoiding Robot</h3>
+      <p>Arduino, Ultrasonic Sensor, Servo Motor</p>
+      <a href="https://github.com/takia24/obstacle-avoiding-robot" target="_blank">
+        View on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      GitHub:
+      <a href="https://github.com/takia24" target="_blank">
+        github.com/takia24
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Takia Yasmin</p>
+    <button onclick="scrollToTop()">⬆ Back to Top</button>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
