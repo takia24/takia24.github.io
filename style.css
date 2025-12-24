@@ -13,6 +13,7 @@ body {
   color: #eaeaea;
 }
 
+/* ---------- NAV ---------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -21,6 +22,7 @@ nav {
   color: white;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 nav ul {
@@ -29,7 +31,8 @@ nav ul {
   gap: 15px;
 }
 
-nav a, nav button {
+nav a,
+nav button {
   color: white;
   background: none;
   border: none;
@@ -37,6 +40,7 @@ nav a, nav button {
   font-size: 1rem;
 }
 
+/* ---------- HEADER ---------- */
 header {
   text-align: center;
   padding: 60px 20px;
@@ -44,6 +48,16 @@ header {
   color: white;
 }
 
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  margin: 4px 0;
+  opacity: 0.95;
+}
+
+/* ---------- SECTIONS ---------- */
 section {
   max-width: 900px;
   margin: 40px auto;
@@ -52,18 +66,21 @@ section {
 
 h2 {
   color: #1f3c88;
+  margin-bottom: 15px;
 }
 
 .dark h2 {
   color: #90caf9;
 }
 
+/* ---------- LIST & CARD ---------- */
 ul {
   list-style: none;
   padding: 0;
 }
 
-ul li, .project {
+ul li,
+.project {
   background: white;
   padding: 15px;
   margin: 10px 0;
@@ -71,20 +88,64 @@ ul li, .project {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.dark ul li, .dark .project {
+.dark ul li,
+.dark .project {
   background: #1e1e1e;
 }
 
-.project a {
-  display: inline-block;
-  margin-top: 8px;
+/* ---------- PROJECT ROW ---------- */
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 20px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+.project-row span {
+  font-weight: 500;
+}
+
+/* ---------- PROJECT BUTTON ---------- */
+.project-row a {
   text-decoration: none;
   background: #1f3c88;
   color: white;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
 }
 
+.project-row a:hover {
+  background: #3a6ff7;
+}
+
+/* Dark mode project card */
+.dark .project-row {
+  background: #1e1e1e;
+}
+
+/* Dark mode button polish */
+.dark .project-row a {
+  background: #90caf9;
+  color: #121212;
+}
+
+.dark .project-row a:hover {
+  background: #64b5f6;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 20px;
@@ -92,9 +153,24 @@ footer {
   color: white;
 }
 
+footer button {
+  margin-top: 10px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 600px) {
   nav ul {
     flex-wrap: wrap;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
 
