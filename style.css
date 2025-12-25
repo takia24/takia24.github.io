@@ -286,23 +286,64 @@ nav a.active {
   color: #60a5fa;
 }
 
-/* ---------- PROFILE IMAGE ---------- */
-.profile-img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
+//* ---------- PROFILE IMAGE WITH GRADIENT RING ---------- */
+.profile-wrapper {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 4px solid rgba(255,255,255,0.8);
-  margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
+  padding: 4px;
+  background: linear-gradient(135deg, #3a6ff7, #60a5fa);
+  margin: 0 auto 18px;
+  animation: float 3s ease-in-out infinite;
 }
 
-.profile-img:hover {
-  transform: scale(1.05);
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
 }
 
-/* Dark mode border */
-.dark .profile-img {
-  border-color: rgba(255,255,255,0.6);
+/* Dark mode gradient */
+.dark .profile-wrapper {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa);
 }
+
+/* Subtle floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about-section {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
