@@ -15,17 +15,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
   });
 });
 
-// ===== Active Navbar Link =====
+// ===== Active Nav =====
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
 window.addEventListener("scroll", () => {
   let current = "";
-
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
+    if (scrollY >= section.offsetTop - 120) {
+      current = section.id;
     }
   });
 
@@ -37,7 +35,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ===== Fade-in on Scroll =====
+// ===== Fade-in =====
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -46,21 +44,10 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll("section").forEach(section => {
+sections.forEach(section => {
   section.classList.add("hidden");
   observer.observe(section);
 });
 
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-sections.forEach(section => observer.observe(section));
 
 
