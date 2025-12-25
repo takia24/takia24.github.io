@@ -195,3 +195,64 @@ footer button {
     gap: 10px;
   }
 }
+
+/* ---------- ACHIEVEMENTS CARD ---------- */
+.achievement-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+.achievement-card span {
+  font-weight: 500;
+  max-width: 75%;
+}
+
+/* Button */
+.achievement-card a {
+  text-decoration: none;
+  background: #1f3c88;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.achievement-card a:hover {
+  background: #3a6ff7;
+}
+
+/* Dark mode */
+.dark .achievement-card {
+  background: #1e1e1e;
+}
+
+.dark .achievement-card a {
+  background: #90caf9;
+  color: #121212;
+}
+
+.dark .achievement-card a:hover {
+  background: #64b5f6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .achievement-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
