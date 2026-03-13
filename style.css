@@ -211,3 +211,22 @@ footer {
   }
 }
 
+/* ===== Certificate Images ===== */
+.achievement-card {
+  flex-direction: column;   /* 👉 important */
+  align-items: flex-start;  /* 👉 important */
+}
+
+.achievement-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card img:hover {
+  transform: scale(1.03);
+}
+
