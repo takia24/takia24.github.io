@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // ===== Dark Mode Toggle =====
   const toggle = document.getElementById("themeToggle");
 
   if (toggle) {
@@ -15,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
   }
-
-});
 
   // ===== Smooth Scroll =====
   document.querySelectorAll('nav a[href^="#"]').forEach(link => {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let current = "";
 
     sections.forEach(section => {
-      if (scrollY >= section.offsetTop - 120) {
+      if (window.scrollY >= section.offsetTop - 120) {
         current = section.id;
       }
     });
