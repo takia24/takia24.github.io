@@ -1,19 +1,22 @@
-// ===== FULL SCRIPT (100% WORKING) =====
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ===== Dark Mode Toggle =====
   const toggle = document.getElementById("themeToggle");
 
   if (toggle) {
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", function () {
+
       document.body.classList.toggle("dark");
 
-      // icon change
-      toggle.textContent =
-        document.body.classList.contains("dark") ? "☀️" : "🌙";
+      if (document.body.classList.contains("dark")) {
+        toggle.textContent = "☀️";
+      } else {
+        toggle.textContent = "🌙";
+      }
+
     });
   }
+
+});
 
   // ===== Smooth Scroll =====
   document.querySelectorAll('nav a[href^="#"]').forEach(link => {
