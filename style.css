@@ -211,10 +211,11 @@ footer {
   }
 }
 
-/* ===== Certificate Images ===== */
+/* FIX alignment */
 .achievement-card {
-  flex-direction: column;   /* 👉 important */
-  align-items: flex-start;  /* 👉 important */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .achievement-card img {
