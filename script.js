@@ -92,18 +92,21 @@ type();
 
 
 
-const text = "Passionate about building smart systems using IoT, automation, and embedded technologies.";
+window.onload = function () {
 
-let i = 0;
+  const text = "Passionate about building smart systems using IoT, automation, and embedded technologies.";
 
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("hero-desc").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 25); // speed control
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("hero-desc").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 25);
+    }
   }
-}
 
-window.onload = typeEffect;
+  typeEffect();
 
+};
 
