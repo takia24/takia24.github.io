@@ -262,3 +262,48 @@ footer {
 .dark footer {
   background: linear-gradient(135deg, #020617, #0f172a);
 }
+
+
+
+
+
+
+/* typing */
+#typing {
+  color:#4f7cff;
+  font-weight:600;
+}
+
+/* skill bar */
+.skill-bar { margin:15px 0; }
+
+.bar {
+  height:8px;
+  background:#ddd;
+  border-radius:20px;
+}
+
+.bar span {
+  display:block;
+  height:100%;
+  background:#3a6ff7;
+  border-radius:20px;
+}
+
+/* hover */
+.project-row {
+  transition:0.3s ease;
+}
+
+.project-row:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* particles */
+#particles-js {
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}

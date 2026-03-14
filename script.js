@@ -64,3 +64,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+const text = ["Aspiring IoT Engineer", "Embedded Systems Enthusiast", "ESP32 Developer"];
+let i = 0, j = 0;
+
+function type() {
+  if (j < text[i].length) {
+    document.getElementById("typing").innerHTML += text[i][j];
+    j++;
+    setTimeout(type, 60);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (j > 0) {
+    document.getElementById("typing").innerHTML = text[i].substring(0, j-1);
+    j--;
+    setTimeout(erase, 40);
+  } else {
+    i = (i+1) % text.length;
+    setTimeout(type, 300);
+  }
+}
+
+type();
+
+
