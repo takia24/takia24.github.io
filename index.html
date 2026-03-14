@@ -341,12 +341,11 @@
 
 <script src="script.js"></script>
 
-<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
 (function(){
-emailjs.init("ZHBv2b9RSIU5ceFaL"); // ✅ Public Key
+emailjs.init("ZHBv2b9RSlU5ceFaL");
 })();
 
 function sendMail(e){
@@ -355,11 +354,12 @@ e.preventDefault();
 
 emailjs.send("service_na1vmlo","template_abokmli",{
 name:"Portfolio Visitor",
-message:"Someone clicked your Resume",
-time:new Date().toLocaleString()
+time:new Date().toLocaleString(),
+email:"portfolio@visitor.com"
 })
 
 .then(function(){
+alert("Mail sent 😄");
 window.open("Takia_Yasmin_Resume.pdf","_blank");
 })
 
@@ -369,8 +369,7 @@ alert("Mail failed 😢");
 });
 
 }
-</script>
-</body>
+</script></body>
 </html>
 
 
