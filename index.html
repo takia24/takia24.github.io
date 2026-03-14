@@ -346,7 +346,7 @@
 
 <script>
 (function(){
-emailjs.init("ZHBv2b9RSIU5ceFaL"); // public key
+emailjs.init("ZHBv2b9RSIU5ceFaL"); // ✅ Public Key
 })();
 
 function sendMail(e){
@@ -354,21 +354,23 @@ function sendMail(e){
 e.preventDefault();
 
 emailjs.send("service_na1vmlo","template_abokmli",{
-name: "Portfolio Visitor",
-message: "Someone clicked your Resume",
-time: new Date().toLocaleString()
+name:"Portfolio Visitor",
+message:"Someone clicked your Resume",
+time:new Date().toLocaleString()
 })
 
 .then(function(){
 window.open("Takia_Yasmin_Resume.pdf","_blank");
 })
+
 .catch(function(error){
 console.log(error);
 alert("Mail failed 😢");
 });
 
 }
-</script></body>
+</script>
+</body>
 </html>
 
 
