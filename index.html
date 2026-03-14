@@ -37,9 +37,11 @@
     </p>
 
     <div class="hero-buttons">
-      
-      <a href="Takia_Yasmin_Resume.pdf" class="btn-outline" target="_blank">Resume</a>
-    </div>
+   
+      <a href="Takia_Yasmin_Resume.pdf" target="_blank" onclick="sendMail()" class="btn-outline">
+      Resume
+      </a>
+    
   </div>
 
   <div class="profile-wrapper">
@@ -340,6 +342,31 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("ZHBv2b9RSIU5ceFaL"); // 👉 Public Key
+})();
+
+function sendMail(){
+
+  emailjs.send("service_na1vmlo","template_abokmli",{
+    name: "Portfolio Visitor",
+    message: "Someone clicked your Resume",
+    time: new Date().toLocaleString()
+  })
+
+  .then(function(response) {
+     console.log("SUCCESS!", response.status, response.text);
+  }, function(error) {
+     console.log("FAILED...", error);
+  });
+
+}
+</script>
 </body>
 </html>
 
