@@ -91,3 +91,19 @@ function erase() {
 type();
 
 
+
+const text = "Passionate about building smart systems using IoT, automation, and embedded technologies.";
+
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("hero-desc").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 25); // speed control
+  }
+}
+
+window.onload = typeEffect;
+
+
