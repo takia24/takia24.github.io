@@ -1,339 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Takia Yasmin | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Takia Yasmin | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
+<!-- ================= NAVIGATION ================= -->
 <nav>
-  <h2>Takia</h2>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="certificates.html">Certificates</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+<h2>Takia</h2>
 
-    <li><button id="themeToggle">🌙</button></li>
-  </ul>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="certificates.html">Certificates</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><button id="themeToggle">🌙</button></li>
+</ul>
 </nav>
 
+<!-- ================= HERO ================= -->
 <header>
 
-  <div class="hero-text">
-    <h1>Takia Yasmin</h1>
+<div class="hero-text">
+<h1>Takia Yasmin</h1>
+<h2><span id="typing"></span></h2>
+<p id="hero-desc"></p>
 
-    <h2><span id="typing"></span></h2>
+<div class="hero-buttons">
+<a href="#" onclick="sendMail(event)" class="btn-outline">Resume</a>
+</div>
+</div>
 
-    <p id="hero-desc"></p>
-
-    <div class="hero-buttons">
-      <a href="#" onclick="sendMail(event)" class="btn-outline">Resume</a>
-    </div>
-
-  </div> <!-- ✅ hero-text close -->
-
-  <div class="profile-wrapper">
-    <div class="profile-ring">
-      <img src="images/profile.jpg" alt="Takia Yasmin" class="profile-img">
-    </div>
-  </div>
+<div class="profile-wrapper">
+<div class="profile-ring">
+<img src="images/profile.jpg" alt="Takia Yasmin" class="profile-img">
+</div>
+</div>
 
 </header>
 
+<!-- ================= ABOUT ================= -->
 <section id="about" class="about-section">
- 
-  
-    <h2>About Me</h2>
-    <p>
-      Undergraduate student of Internet of Things and Robotics Engineering with strong
-      interest in IoT systems, embedded technologies, and smart device development.
-    </p>
-  
+<h2>About Me</h2>
+<p>
+Undergraduate student of Internet of Things and Robotics Engineering with strong
+interest in IoT systems, embedded technologies, and smart device development.
+</p>
 </section>
 
+<!-- ================= SKILLS ================= -->
 <section id="skills">
-  <h2>Computer & Technical Skills</h2>
+<h2>Computer & Technical Skills</h2>
 
-  <div class="skills-grid">
+<div class="skills-grid">
 
-    <!-- Programming -->
-    <div class="skill-card">
-      <h3>Programming Languages</h3>
+<!-- Programming -->
+<div class="skill-card">
+<h3>Programming Languages</h3>
 
-      <div class="skill-bar">
-        <p>C</p>
-        <div class="bar"><span style="width:90%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>C</p>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>C++</p>
-        <div class="bar"><span style="width:85%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>C++</p>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>Java</p>
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>Java</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>Python</p>
-        <div class="bar"><span style="width:75%"></span></div>
-      </div>
-    </div>
+<div class="skill-bar">
+<p>Python</p>
+<div class="bar"><span style="width:75%"></span></div>
+</div>
+</div>
 
-    <!-- Web -->
-    <div class="skill-card">
-      <h3>Web Technologies</h3>
+<!-- Web -->
+<div class="skill-card">
+<h3>Web Technologies</h3>
 
-      <div class="skill-bar">
-        <p>HTML</p>
-        <div class="bar"><span style="width:95%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>HTML</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>CSS</p>
-        <div class="bar"><span style="width:90%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>CSS</p>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>JavaScript</p>
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>JavaScript</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>PHP</p>
-        <div class="bar"><span style="width:70%"></span></div>
-      </div>
-    </div>
+<div class="skill-bar">
+<p>PHP</p>
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+</div>
 
-    <!-- IoT -->
-    <div class="skill-card">
-      <h3>IoT & Embedded</h3>
+<!-- IoT -->
+<div class="skill-card">
+<h3>IoT & Embedded</h3>
 
-      <div class="skill-bar">
-        <p>Arduino</p>
-        <div class="bar"><span style="width:92%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>Arduino</p>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>ESP32</p>
-        <div class="bar"><span style="width:88%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>ESP32</p>
+<div class="bar"><span style="width:88%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>IoT Systems</p>
-        <div class="bar"><span style="width:85%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>IoT Systems</p>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>Embedded Design</p>
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
-    </div>
+<div class="skill-bar">
+<p>Embedded Design</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+</div>
 
-    <!-- Tools -->
-    <div class="skill-card">
-      <h3>Tools & IDEs</h3>
+<!-- Tools -->
+<div class="skill-card">
+<h3>Tools & IDEs</h3>
 
-      <div class="skill-bar">
-        <p>VS Code</p>
-        <div class="bar"><span style="width:95%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>VS Code</p>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>Arduino IDE</p>
-        <div class="bar"><span style="width:92%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>Arduino IDE</p>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>IntelliJ IDEA</p>
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
+<div class="skill-bar">
+<p>IntelliJ IDEA</p>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
 
-      <div class="skill-bar">
-        <p>Eclipse</p>
-        <div class="bar"><span style="width:70%"></span></div>
-      </div>
-    </div>
+<div class="skill-bar">
+<p>Eclipse</p>
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+</div>
 
-  </div>
+</div>
 </section>
+
+<!-- ================= PROJECTS ================= -->
 <section id="projects">
-  <h2>Projects</h2>
+<h2>Projects</h2>
 
-  <div class="project-row">
-    <span>RTOS Based Safety Monitoring System</span>
-    <a href="https://github.com/takia24/RTOS-Based-Safety-Monitoring-System" target="_blank">
-    View Project
-    </a>
-  </div>
+<div class="project-row">
+<span>RTOS Based Safety Monitoring System</span>
+<a href="https://github.com/takia24/RTOS-Based-Safety-Monitoring-System" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>IoT-Based Environmental Monitoring System</span>
-    <a href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>IoT-Based Environmental Monitoring System</span>
+<a href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>IoT-Based Motion Detection System</span>
-    <a href="https://github.com/takia24/IoT-Based-Motion-Detection-ESP8266" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>IoT-Based Motion Detection System</span>
+<a href="https://github.com/takia24/IoT-Based-Motion-Detection-ESP8266" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>MQTT Communication using ESP32</span>
-    <a href="https://github.com/takia24/MQTT-Communication-ESP32" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>MQTT Communication using ESP32</span>
+<a href="https://github.com/takia24/MQTT-Communication-ESP32" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>Smart Parking System Using Arduino</span>
-    <a href="https://github.com/takia24/Smart-Parking-System-Using-Arduino" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>Smart Parking System Using Arduino</span>
+<a href="https://github.com/takia24/Smart-Parking-System-Using-Arduino" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>Obstacle Avoiding Robot</span>
-    <a href="https://github.com/takia24/obstacle-avoiding-robot" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>Obstacle Avoiding Robot</span>
+<a href="https://github.com/takia24/obstacle-avoiding-robot" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>Smart Hand Glove for Blind People</span>
-    <a href="https://github.com/takia24/Smart-Hand-Glove-For-Blind" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>Smart Hand Glove for Blind People</span>
+<a href="https://github.com/takia24/Smart-Hand-Glove-For-Blind" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>Hospital Management System</span>
-    <a href="https://github.com/takia24/Hospital-Management-System-" target="_blank">View Project</a>
-  </div>
+<!-- ML PROJECT -->
+<div class="project-row">
+<div>
+<h3>🌾 Crop Prediction System (ML)</h3>
 
-  <div class="project-row">
-    <span>Clap Switch (Sound-Based Light Control)</span>
-    <a href="https://github.com/takia24/ClapSwitch" target="_blank">View Project</a>
-  </div>
+<p>
+Machine Learning based web application built with Python and Flask.
+It predicts the most suitable crop based on soil nutrients and weather conditions.
+</p>
 
-  <div class="project-row">
-    <span>Social Media Platform (CodeAlpha Internship)</span>
-    <a href="https://github.com/takia24/CodeAlpha_SocialMediaPlatform" target="_blank">View Project</a>
-  </div>
+<a href="https://github.com/takia24/crop-prediction-ml/tree/main/CropPrediction" target="_blank">
+View Project
+</a>
 
-  <div class="project-row">
-    <span>Simple E-Commerce Store (CodeAlpha Internship)</span>
-    <a href="https://github.com/takia24/CodeAlpha_SimpleEcommerceStore" target="_blank">View Project</a>
-  </div>
+<a href="https://crop-prediction-ml-g0q0.onrender.com/" target="_blank">
+Live Demo
+</a>
 
-  <div class="project-row">
-    <span>Laravel CRUD Application</span>
-    <a href="https://github.com/takia24/laravelCRUD" target="_blank">View Project</a>
-  </div>
+</div>
+</div>
 
-  <div class="project-row">
-    <span>Laravel Blog Management System</span>
-    <a href="https://github.com/takia24/Laravel_blogs-5-6-2025-" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>Hospital Management System</span>
+<a href="https://github.com/takia24/Hospital-Management-System-" target="_blank">View Project</a>
+</div>
 
-  <div class="project-row">
-    <span>Frontend Integration & User Interaction</span>
-    <a href="https://github.com/takia24/Frontend-Integration-and-User-Interaction" target="_blank">View Project</a>
-  </div>
+<div class="project-row">
+<span>Clap Switch (Sound-Based Light Control)</span>
+<a href="https://github.com/takia24/ClapSwitch" target="_blank">View Project</a>
+</div>
+
+<div class="project-row">
+<span>Social Media Platform (CodeAlpha Internship)</span>
+<a href="https://github.com/takia24/CodeAlpha_SocialMediaPlatform" target="_blank">View Project</a>
+</div>
+
+<div class="project-row">
+<span>Simple E-Commerce Store (CodeAlpha Internship)</span>
+<a href="https://github.com/takia24/CodeAlpha_SimpleEcommerceStore" target="_blank">View Project</a>
+</div>
+
+<div class="project-row">
+<span>Laravel CRUD Application</span>
+<a href="https://github.com/takia24/laravelCRUD" target="_blank">View Project</a>
+</div>
+
+<div class="project-row">
+<span>Laravel Blog Management System</span>
+<a href="https://github.com/takia24/Laravel_blogs-5-6-2025-" target="_blank">View Project</a>
+</div>
+
+<div class="project-row">
+<span>Frontend Integration & User Interaction</span>
+<a href="https://github.com/takia24/Frontend-Integration-and-User-Interaction" target="_blank">View Project</a>
+</div>
 
 </section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
 <section id="achievements">
-  <h2>Achievements & Certifications</h2>
+<h2>Achievements & Certifications</h2>
 
-  <div class="achievement-card">
-    <span>Top 30 Finalist – Mugen Society Short Story Contest (2025)</span>
-    <a href="Certificates/mugen_short_story_finalist_2025.pdf" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Top 30 Finalist – Mugen Society Short Story Contest (2025)</span>
+<a href="Certificates/mugen_short_story_finalist_2025.pdf" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>Participant – Mugen Society Tech Olympiad (2025)</span>
-    <a href="Certificates/mugen_tech_olympiad_participant_2025.pdf" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Participant – Mugen Society Tech Olympiad (2025)</span>
+<a href="Certificates/mugen_tech_olympiad_participant_2025.pdf" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>Integration Bee (Senior) – Certificate of Participation (2025)</span>
-    <a href="Certificates/integration_bee_senior_2025.pdf" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Integration Bee (Senior) – Certificate of Participation (2025)</span>
+<a href="Certificates/integration_bee_senior_2025.pdf" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    
-    <span>CodeAlpha Full Stack Development Internship – Certificate of Completion (2025)</span>
+<div class="achievement-card">
+<span>CodeAlpha Full Stack Development Internship – Certificate of Completion (2025)</span>
+<a href="Certificates/codealpha_fullstack_internship_2025.jpg" target="_blank">View</a>
+</div>
 
-    <a href="Certificates/codealpha_fullstack_internship_2025.jpg" target="_blank">
-    View</a>
-                                                                                                                                
-  </div>
+<div class="achievement-card">
+<span>15th National Undergraduate Mathematics Olympiad – Certificate of Participation (2024)</span>
+<a href="Certificates/math_olympiad_2024.jpg" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>15th National Undergraduate Mathematics Olympiad – Certificate of Participation (2024)</span>
-    <a href="Certificates/math_olympiad_2024.jpg" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Robotics Camp – Certificate of Participation (2024)</span>
+<a href="Certificates/robotics_camp_2024.jpg" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>Robotics Camp – Certificate of Participation (2024)</span>
-    <a href="Certificates/robotics_camp_2024.jpg" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Bangladesh Economics Olympiad – Preliminary Selection Round (2025)</span>
+<a href="Certificates/bangladesh_economics_olympiad_2025.pdf" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>Bangladesh Economics Olympiad – Preliminary Selection Round (2025)</span>
-    <a href="Certificates/bangladesh_economics_olympiad_2025.pdf" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Digital Literacy Course for Youth – Digital Literacy Center (2023)</span>
+<a href="Certificates/digital_literacy_2023.jpg" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-    <span>Digital Literacy Course for Youth – Digital Literacy Center (2023)</span>
-    <a href="Certificates/digital_literacy_2023.jpg" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>21st Century Skilling Program – Intermediate (2023)</span>
+<a href="Certificates/Wadhwani.jpg" target="_blank">View</a>
+</div>
 
-  <div class="achievement-card">
-   
-    <span>21st Century Skilling Program – Intermediate (2023)</span>
-
-    <a href="Certificates/Wadhwani.jpg" target="_blank">View</a>
-  </div>
-
-  <div class="achievement-card">
-   
-    <span>Best Reader Award – Bishwo Sahitya Kendra (2017)</span>
-
-    <a href="Certificates/SEQAEP.jpg" target="_blank">View</a>
-  </div>
+<div class="achievement-card">
+<span>Best Reader Award – Bishwo Sahitya Kendra (2017)</span>
+<a href="Certificates/SEQAEP.jpg" target="_blank">View</a>
+</div>
 
 </section>
 
-
-
+<!-- ================= EDUCATION ================= -->
 <section id="education">
-  <h2>Education</h2>
-  <p><strong>University of Frontier Technology, Bangladesh</strong><br>
-  B.Sc. in Internet of Things and Robotics Engineering (2023–2027)</p>
+<h2>Education</h2>
 
-  <p><strong>Nalitabari Shaheed Abdur Rashid Mohila College</strong><br>
-  HSC – Science | GPA: 5.00</p>
+<p><strong>University of Frontier Technology, Bangladesh</strong><br>
+B.Sc. in Internet of Things and Robotics Engineering (2023–2027)</p>
+
+<p><strong>Nalitabari Shaheed Abdur Rashid Mohila College</strong><br>
+HSC – Science | GPA: 5.00</p>
 </section>
 
+<!-- ================= CONTACT ================= -->
 <section id="contact">
-  <h2>Contact</h2>
 
-  <div class="contact-card email">
-    <span>📧 Email</span>
-    <a href="mailto:takia0001@std.uftb.ac.bd">takia0001@std.uftb.ac.bd</a>
-  </div>
+<h2>Contact</h2>
 
-  <div class="contact-card linkedin">
-    <span>💼 LinkedIn</span>
-    <a href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a" target="_blank">
-      linkedin.com/in/takia-yasmin
-    </a>
-  </div>
+<div class="contact-card email">
+<span>📧 Email</span>
+<a href="mailto:takia0001@std.uftb.ac.bd">takia0001@std.uftb.ac.bd</a>
+</div>
+
+<div class="contact-card linkedin">
+<span>💼 LinkedIn</span>
+<a href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a" target="_blank">
+linkedin.com/in/takia-yasmin
+</a>
+</div>
+
 </section>
-
 
 <footer>
-  <p>© 2025 Takia Yasmin</p>
+<p>© 2025 Takia Yasmin</p>
 </footer>
 
 <script src="script.js"></script>
@@ -346,7 +362,6 @@ emailjs.init("ZHBv2b9RSlU5ceFaL");
 })();
 
 function sendMail(e){
-
 e.preventDefault();
 
 emailjs.send("service_na1vmlo","template_abokmli",{
@@ -354,20 +369,16 @@ name:"Portfolio Visitor",
 time:new Date().toLocaleString(),
 email:"portfolio@visitor.com"
 })
-
 .then(function(){
 alert("Mail sent 😄");
 window.open("Takia_Yasmin_Resume.pdf","_blank");
 })
-
 .catch(function(error){
 console.log(error);
 alert("Mail failed 😢");
 });
-
 }
-</script></body>
+</script>
+
+</body>
 </html>
-
-
-
