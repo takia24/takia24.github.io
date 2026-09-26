@@ -8,14 +8,11 @@
     <title>Takia Yasmin | IoT & Robotics Engineering</title>
 
     <meta name="description"
-        content="Takia Yasmin - Internet of Things and Robotics Engineering student working on IoT, Embedded Systems, AI, Machine Learning, Robotics and Intelligent Systems.">
+        content="Takia Yasmin - Internet of Things and Robotics Engineering student working on IoT, Embedded Systems, AI, Machine Learning, Robotics and intelligent systems.">
 
     <meta name="author" content="Takia Yasmin">
 
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
-
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,22 +20,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
-    <!-- =====================================================
-         MAIN CSS
-    ====================================================== -->
-
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 
@@ -53,19 +41,14 @@
 
         <div class="nav-container">
 
+            <!-- Logo -->
+
             <a href="#home" class="logo">
-                Takia<span>.</span>
+                TAKIA<span>.</span>
             </a>
 
 
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </button>
-
+            <!-- Navigation -->
 
             <nav class="nav-links">
 
@@ -103,6 +86,45 @@
 
             </nav>
 
+
+            <!-- Right Buttons -->
+
+            <div class="nav-actions">
+
+                <a
+                    href="#contact"
+                    class="nav-talk">
+
+                    Let's Talk
+
+                </a>
+
+
+                <a
+                    href="Takia_Yasmin_Resume.pdf"
+                    class="nav-resume"
+                    target="_blank"
+                    onclick="sendMail(event)">
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    CV / Resume
+
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
         </div>
 
     </header>
@@ -118,16 +140,16 @@
         <div class="hero-container">
 
 
-            <!-- HERO CONTENT -->
+            <!-- LEFT SIDE -->
 
             <div class="hero-content">
 
 
-                <div class="hero-badge">
+                <div class="hero-availability">
 
                     <span></span>
 
-                    IoT & Robotics Engineering
+                    Available for Opportunities
 
                 </div>
 
@@ -135,21 +157,30 @@
                 <h1>
 
                     Building Smart Systems
-                    <span>That Connect</span>
-                    Technology With The Real World.
+                    <br>
+
+                    That Connect Technology
+                    <br>
+
+                    <span class="hero-gradient">
+                        With The Real World.
+                    </span>
 
                 </h1>
 
 
                 <p class="hero-description">
 
-                    I am an Internet of Things and Robotics Engineering
-                    student interested in building practical systems by
-                    combining IoT, embedded technologies, artificial
-                    intelligence, machine learning, robotics and automation.
+                    I’m <strong>Takia Yasmin</strong>, an undergraduate
+                    student of Internet of Things and Robotics Engineering
+                    at the University of Frontier Technology, Bangladesh.
+                    I work on IoT, embedded systems, artificial intelligence,
+                    machine learning, robotics and automation.
 
                 </p>
 
+
+                <!-- Typing -->
 
                 <div class="typing-wrapper">
 
@@ -160,6 +191,8 @@
                 </div>
 
 
+                <!-- HERO BUTTONS -->
+
                 <div class="hero-buttons">
 
 
@@ -167,7 +200,7 @@
                         href="#projects"
                         class="primary-btn">
 
-                        Explore My Projects
+                        View My Work
 
                         <i class="fa-solid fa-arrow-right"></i>
 
@@ -175,17 +208,27 @@
 
 
                     <a
-                        href="Takia_Yasmin_Resume.pdf"
-                        class="secondary-btn"
-                        target="_blank"
-                        onclick="sendMail(event)">
+                        href="#contact"
+                        class="secondary-btn">
 
-                        <i class="fa-solid fa-file-lines"></i>
+                        Let's Connect
 
-                        View Resume
+                        <i class="fa-regular fa-message"></i>
 
                     </a>
 
+
+                    <a
+                        href="Takia_Yasmin_Resume.pdf"
+                        class="download-cv"
+                        target="_blank"
+                        onclick="sendMail(event)">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Download CV
+
+                    </a>
 
                 </div>
 
@@ -197,7 +240,9 @@
 
                     <div class="stat-item">
 
-                        <strong>26+</strong>
+                        <strong>
+                            26+
+                        </strong>
 
                         <span>
                             Projects
@@ -208,7 +253,9 @@
 
                     <div class="stat-item">
 
-                        <strong>2</strong>
+                        <strong>
+                            2
+                        </strong>
 
                         <span>
                             Research Works
@@ -219,7 +266,9 @@
 
                     <div class="stat-item">
 
-                        <strong>IoT + AI</strong>
+                        <strong>
+                            IoT + AI
+                        </strong>
 
                         <span>
                             Core Focus
@@ -230,7 +279,9 @@
 
                     <div class="stat-item">
 
-                        <strong>2026</strong>
+                        <strong>
+                            2026
+                        </strong>
 
                         <span>
                             Research
@@ -238,38 +289,84 @@
 
                     </div>
 
-
                 </div>
 
             </div>
 
 
 
-            <!-- PROFILE -->
+            <!-- =================================================
+                 RIGHT PROFILE AREA
+            ================================================== -->
 
-            <div class="hero-profile">
+            <div class="hero-profile-area">
 
-                <div class="profile-glow"></div>
+
+                <div class="profile-orbit orbit-one"></div>
+
+                <div class="profile-orbit orbit-two"></div>
 
 
                 <div class="profile-card">
 
 
-                    <div class="profile-image-wrapper">
+                    <!-- Floating labels -->
 
-                        <img
-                            src="images/profile.jpg"
-                            alt="Takia Yasmin"
-                            class="profile-image">
+                    <div class="profile-tag tag-top">
+
+                        <span></span>
+
+                        IoT & EMBEDDED
 
                     </div>
 
 
-                    <div class="profile-label">
+                    <div class="profile-tag tag-left">
 
-                        <i class="fa-solid fa-location-dot"></i>
+                        <span></span>
 
-                        Bangladesh
+                        AI / ML
+
+                    </div>
+
+
+                    <div class="profile-tag tag-right">
+
+                        <span></span>
+
+                        ROBOTICS
+
+                    </div>
+
+
+                    <div class="profile-tag tag-bottom">
+
+                        <span></span>
+
+                        BANGLADESH • IRE
+
+                    </div>
+
+
+                    <!-- Profile image -->
+
+                    <div class="profile-circle">
+
+                        <div class="profile-ring"></div>
+
+
+                        <img
+                            src="images/profile.jpg"
+                            alt="Takia Yasmin">
+
+                    </div>
+
+
+                    <div class="profile-role">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                        IoT & Robotics Engineering
 
                     </div>
 
@@ -292,20 +389,14 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 02 // PROFILE
-
             </div>
-
 
             <h2>
                 About Me
             </h2>
-
 
             <p>
                 Engineering ideas into practical and intelligent
@@ -315,112 +406,74 @@
         </div>
 
 
-
         <div class="about-grid">
 
-
-            <!-- ABOUT TEXT -->
 
             <div class="about-main">
 
 
-                <div class="about-intro">
+                <h3>
+                    IoT, AI & Embedded Systems Enthusiast
+                </h3>
 
 
-                    <h3>
-                        IoT, AI & Embedded Systems Enthusiast
-                    </h3>
+                <p>
+
+                    I am <strong>Takia Yasmin</strong>, an undergraduate
+                    student of Internet of Things and Robotics Engineering
+                    at the University of Frontier Technology, Bangladesh.
+
+                </p>
 
 
-                    <p>
+                <p>
 
-                        I am <strong>Takia Yasmin</strong>, an undergraduate
-                        student of Internet of Things and Robotics Engineering
-                        at the University of Frontier Technology, Bangladesh.
+                    My interests include IoT systems, embedded development,
+                    artificial intelligence, machine learning, robotics,
+                    automation and intelligent monitoring systems.
 
-                    </p>
-
-
-                    <p>
-
-                        My academic and project work focuses on IoT systems,
-                        embedded development, artificial intelligence,
-                        machine learning, robotics, automation and
-                        intelligent monitoring systems.
-
-                    </p>
+                </p>
 
 
-                    <p>
+                <p>
 
-                        I enjoy developing practical technology solutions
-                        by combining hardware, sensors, microcontrollers,
-                        communication technologies, software and intelligent
-                        algorithms.
+                    I enjoy transforming real-world problems into practical
+                    technology solutions by combining hardware, software,
+                    sensors, communication and intelligent algorithms.
 
-                    </p>
-
-
-                    <p>
-
-                        Through academic projects, independent development
-                        and research activities, I have worked on IoT-based
-                        monitoring systems, robotics projects, machine
-                        learning applications, computer vision and
-                        real-time embedded systems.
-
-                    </p>
-
-                </div>
-
+                </p>
 
 
                 <div class="about-checks">
 
 
                     <div>
-
                         <i class="fa-solid fa-check"></i>
-
                         IoT & Embedded Systems
-
                     </div>
 
 
                     <div>
-
                         <i class="fa-solid fa-check"></i>
-
                         AI & Machine Learning
-
                     </div>
 
 
                     <div>
-
                         <i class="fa-solid fa-check"></i>
-
                         Robotics & Automation
-
                     </div>
 
 
                     <div>
-
                         <i class="fa-solid fa-check"></i>
-
                         Research & Intelligent Systems
-
                     </div>
-
 
                 </div>
 
             </div>
 
-
-
-            <!-- ABOUT FOCUS -->
 
             <div class="about-cards">
 
@@ -428,118 +481,79 @@
                 <div class="info-card">
 
                     <div class="info-icon">
-
                         <i class="fa-solid fa-microchip"></i>
-
                     </div>
 
+                    <span>IoT</span>
 
-                    <div>
+                    <h3>
+                        Smart Connected Systems
+                    </h3>
 
-                        <span>
-                            IoT
-                        </span>
-
-                        <h3>
-                            Smart Connected Systems
-                        </h3>
-
-                        <p>
-                            Sensor-based monitoring and
-                            connected technology solutions.
-                        </p>
-
-                    </div>
+                    <p>
+                        Sensor-based monitoring and intelligent
+                        connected devices.
+                    </p>
 
                 </div>
-
 
 
                 <div class="info-card">
 
                     <div class="info-icon">
-
                         <i class="fa-solid fa-brain"></i>
-
                     </div>
 
+                    <span>AI</span>
 
-                    <div>
+                    <h3>
+                        Prediction Systems
+                    </h3>
 
-                        <span>
-                            AI
-                        </span>
-
-                        <h3>
-                            Machine Learning Systems
-                        </h3>
-
-                        <p>
-                            Prediction, classification and
-                            intelligent applications.
-                        </p>
-
-                    </div>
+                    <p>
+                        Machine learning and AI-based
+                        intelligent applications.
+                    </p>
 
                 </div>
-
 
 
                 <div class="info-card">
 
                     <div class="info-icon">
-
                         <i class="fa-solid fa-robot"></i>
-
                     </div>
 
+                    <span>Robotics</span>
 
-                    <div>
+                    <h3>
+                        Automation & Control
+                    </h3>
 
-                        <span>
-                            Robotics
-                        </span>
-
-                        <h3>
-                            Automation & Control
-                        </h3>
-
-                        <p>
-                            Robotics, navigation, sensing and
-                            automated systems.
-                        </p>
-
-                    </div>
+                    <p>
+                        Embedded robotics and automated
+                        control systems.
+                    </p>
 
                 </div>
-
 
 
                 <div class="info-card">
 
                     <div class="info-icon">
-
                         <i class="fa-solid fa-satellite-dish"></i>
-
                     </div>
 
+                    <span>Embedded</span>
 
-                    <div>
+                    <h3>
+                        Microcontrollers & Sensors
+                    </h3>
 
-                        <span>
-                            Embedded
-                        </span>
-
-                        <h3>
-                            Microcontrollers & Sensors
-                        </h3>
-
-                        <p>
-                            Arduino, ESP-based systems and
-                            sensor integration.
-                        </p>
-
-                    </div>
+                    <p>
+                        ESP32, Arduino and sensor-based
+                        embedded solutions.
+                    </p>
 
                 </div>
 
@@ -560,34 +574,25 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 03 // EXPERTISE
-
             </div>
-
 
             <h2>
                 Technical Skills
             </h2>
 
-
             <p>
-                Technologies and tools used across my academic,
-                project and research work.
+                Technologies and tools used across my
+                academic and project work.
             </p>
 
         </div>
 
 
-
         <div class="skills-grid">
 
-
-            <!-- PROGRAMMING -->
 
             <div class="skill-card">
 
@@ -600,84 +605,19 @@
                 </h3>
 
                 <p>
-                    Programming for software development,
-                    embedded systems and academic projects.
+                    C, C++, Java, Python and SQL.
                 </p>
 
                 <div class="skill-tags">
-
                     <span>C</span>
                     <span>C++</span>
                     <span>Java</span>
                     <span>Python</span>
                     <span>SQL</span>
-
                 </div>
 
             </div>
 
-
-
-            <!-- IoT -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    <i class="fa-solid fa-microchip"></i>
-                </div>
-
-                <h3>
-                    IoT & Embedded
-                </h3>
-
-                <p>
-                    Microcontrollers, sensors and embedded
-                    systems for connected applications.
-                </p>
-
-                <div class="skill-tags">
-
-                    <span>Arduino</span>
-                    <span>ESP32</span>
-                    <span>ESP8266</span>
-                    <span>Sensors</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- AI -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-
-                <h3>
-                    AI & Machine Learning
-                </h3>
-
-                <p>
-                    Machine learning and AI-based prediction,
-                    classification and intelligent systems.
-                </p>
-
-                <div class="skill-tags">
-
-                    <span>Python</span>
-                    <span>ML</span>
-                    <span>YOLO</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- WEB -->
 
             <div class="skill-card">
 
@@ -690,24 +630,19 @@
                 </h3>
 
                 <p>
-                    Frontend and backend technologies used
-                    for software and web applications.
+                    Technologies used for web application
+                    and frontend development.
                 </p>
 
                 <div class="skill-tags">
-
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
                     <span>PHP</span>
-
                 </div>
 
             </div>
 
-
-
-            <!-- DATABASE -->
 
             <div class="skill-card">
 
@@ -720,23 +655,65 @@
                 </h3>
 
                 <p>
-                    Database technologies used in academic
-                    and application development.
+                    Database technologies used in
+                    academic projects.
                 </p>
 
                 <div class="skill-tags">
-
                     <span>MySQL</span>
                     <span>SQL Server</span>
-                    <span>SQL</span>
-
                 </div>
 
             </div>
 
 
+            <div class="skill-card">
 
-            <!-- ROBOTICS -->
+                <div class="skill-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>
+                    IoT & Embedded
+                </h3>
+
+                <p>
+                    Embedded systems, microcontrollers
+                    and sensor-based projects.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                    <span>ESP8266</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>
+                    AI & Machine Learning
+                </h3>
+
+                <p>
+                    Machine learning and AI-based
+                    prediction and intelligent systems.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>ML</span>
+                    <span>YOLO</span>
+                </div>
+
+            </div>
+
 
             <div class="skill-card">
 
@@ -749,23 +726,18 @@
                 </h3>
 
                 <p>
-                    Robotics projects involving sensing,
-                    navigation and automated control.
+                    Robotics, sensing, navigation and
+                    automated control projects.
                 </p>
 
                 <div class="skill-tags">
-
                     <span>Robotics</span>
                     <span>Automation</span>
                     <span>Control</span>
-
                 </div>
 
             </div>
 
-
-
-            <!-- IDE -->
 
             <div class="skill-card">
 
@@ -774,7 +746,7 @@
                 </div>
 
                 <h3>
-                    Development Tools
+                    IDE
                 </h3>
 
                 <p>
@@ -783,40 +755,10 @@
                 </p>
 
                 <div class="skill-tags">
-
                     <span>VS Code</span>
                     <span>IntelliJ IDEA</span>
                     <span>Eclipse</span>
                     <span>Arduino IDE</span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- GITHUB -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-
-                <h3>
-                    Version Control
-                </h3>
-
-                <p>
-                    Source code management and project
-                    collaboration using GitHub.
-                </p>
-
-                <div class="skill-tags">
-
-                    <span>Git</span>
-                    <span>GitHub</span>
-
                 </div>
 
             </div>
@@ -836,20 +778,14 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 04 // PROJECTS
-
             </div>
-
 
             <h2>
                 Featured Projects
             </h2>
-
 
             <p>
                 Selected projects from my academic,
@@ -859,13 +795,10 @@
         </div>
 
 
-
         <div class="projects-grid">
 
 
-            <!-- =================================================
-                 01 MATERNA
-            ================================================== -->
+            <!-- 01 -->
 
             <article class="project-card">
 
@@ -873,40 +806,32 @@
                     01
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-heart-pulse"></i>
                 </div>
 
-
                 <span class="project-category">
-                    Capstone • IoT • AI
+                    Capstone Project
                 </span>
 
-
                 <h3>
-                    Materna Health Monitoring
+                    An Intelligent IoT and AI-Based Maternal
+                    Health Monitoring, Risk Prediction and
+                    Emergency Alert System
                 </h3>
 
-
                 <p>
-
-                    An intelligent IoT and AI-based maternal
-                    health monitoring, risk prediction and
-                    emergency alert system.
-
+                    An intelligent IoT and AI-based system
+                    for maternal health monitoring, risk
+                    prediction and emergency alerts.
                 </p>
 
-
                 <div class="project-tech">
-
-                    <span>ESP32</span>
                     <span>IoT</span>
-                    <span>AI/ML</span>
-                    <span>Flask</span>
-
+                    <span>AI</span>
+                    <span>ESP32</span>
+                    <span>ML</span>
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/Materna-Health-Monitoring"
@@ -915,7 +840,6 @@
                     class="project-link">
 
                     View Project
-
                     <i class="fa-brands fa-github"></i>
 
                 </a>
@@ -924,9 +848,7 @@
 
 
 
-            <!-- =================================================
-                 02 SHOPPING TROLLEY
-            ================================================== -->
+            <!-- 02 -->
 
             <article class="project-card">
 
@@ -934,39 +856,29 @@
                     02
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-
 
                 <span class="project-category">
                     IoT • Robotics
                 </span>
 
-
                 <h3>
                     Smart Human-Following Shopping Trolley
                 </h3>
 
-
                 <p>
-
-                    A smart trolley project focused on
-                    human following, automated billing,
-                    navigation and intelligent movement.
-
+                    A smart shopping trolley project combining
+                    human-following, automated billing and
+                    intelligent navigation.
                 </p>
 
-
                 <div class="project-tech">
-
-                    <span>ESP32</span>
-                    <span>RFID</span>
+                    <span>IoT</span>
                     <span>Robotics</span>
-
+                    <span>RFID</span>
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/Smart-Human-Following-Shopping-Trolley"
@@ -975,7 +887,6 @@
                     class="project-link">
 
                     View Project
-
                     <i class="fa-brands fa-github"></i>
 
                 </a>
@@ -984,9 +895,7 @@
 
 
 
-            <!-- =================================================
-                 03 CROP PREDICTION
-            ================================================== -->
+            <!-- 03 -->
 
             <article class="project-card">
 
@@ -994,39 +903,28 @@
                     03
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-seedling"></i>
                 </div>
-
 
                 <span class="project-category">
                     Machine Learning
                 </span>
 
-
                 <h3>
                     Crop Prediction System
                 </h3>
 
-
                 <p>
-
-                    A machine learning project that predicts
-                    suitable crops using agricultural and
+                    A machine learning project for crop
+                    prediction using agricultural and
                     environmental input parameters.
-
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>Python</span>
                     <span>ML</span>
-                    <span>Web</span>
-
                 </div>
-
 
                 <div class="project-buttons">
 
@@ -1041,12 +939,11 @@
 
                     </a>
 
-
                     <a
                         href="https://crop-prediction-ml-g0q0.onrender.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="project-link secondary-project-link">
+                        class="project-link">
 
                         Live
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -1059,9 +956,7 @@
 
 
 
-            <!-- =================================================
-                 04 RTOS
-            ================================================== -->
+            <!-- 04 -->
 
             <article class="project-card hidden-project">
 
@@ -1069,39 +964,28 @@
                     04
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-
 
                 <span class="project-category">
                     RTOS • Embedded
                 </span>
 
-
                 <h3>
                     RTOS-Based Safety Monitoring System
+                    (ESP32 + FreeRTOS)
                 </h3>
 
-
                 <p>
-
-                    An ESP32 and FreeRTOS-based safety monitoring
-                    system developed for real-time task management
-                    and monitoring.
-
+                    A real-time safety monitoring project
+                    developed using ESP32 and FreeRTOS.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>ESP32</span>
                     <span>FreeRTOS</span>
-                    <span>Embedded</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/RTOS-Based-Safety-Monitoring-System"
@@ -1118,9 +1002,7 @@
 
 
 
-            <!-- =================================================
-                 05 OBJECT DETECTION
-            ================================================== -->
+            <!-- 05 -->
 
             <article class="project-card hidden-project">
 
@@ -1128,39 +1010,28 @@
                     05
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-camera"></i>
                 </div>
 
-
                 <span class="project-category">
-                    Computer Vision • AI
+                    AI • Computer Vision
                 </span>
-
 
                 <h3>
                     Real-Time Object Detection System
+                    (YOLOv8)
                 </h3>
 
-
                 <p>
-
-                    A real-time computer vision project
-                    developed using YOLOv8 for object
-                    detection.
-
+                    A real-time object detection project
+                    developed using YOLOv8.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>YOLOv8</span>
                     <span>Python</span>
-                    <span>Computer Vision</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/ApexcifyTechnologys_ObjectDetection"
@@ -1177,9 +1048,7 @@
 
 
 
-            <!-- =================================================
-                 06 MULTI DISEASE
-            ================================================== -->
+            <!-- 06 -->
 
             <article class="project-card hidden-project">
 
@@ -1187,39 +1056,28 @@
                     06
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-notes-medical"></i>
                 </div>
-
 
                 <span class="project-category">
                     Machine Learning
                 </span>
 
-
                 <h3>
                     Multi Disease Prediction System
+                    (ML)
                 </h3>
 
-
                 <p>
-
-                    A machine learning-based disease prediction
-                    project developed for classification using
-                    health-related input data.
-
+                    A machine learning-based project for
+                    disease prediction.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>Python</span>
                     <span>ML</span>
-                    <span>Prediction</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/CodeAlpha_DiseasePrediction"
@@ -1236,9 +1094,7 @@
 
 
 
-            <!-- =================================================
-                 07 CREDIT SCORING
-            ================================================== -->
+            <!-- 07 -->
 
             <article class="project-card hidden-project">
 
@@ -1246,38 +1102,28 @@
                     07
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
-
 
                 <span class="project-category">
                     AI • Machine Learning
                 </span>
 
-
                 <h3>
                     Credit Scoring AI System
                 </h3>
 
-
                 <p>
-
-                    An AI and machine learning project focused
-                    on credit scoring and financial data analysis.
-
+                    An AI and machine learning project
+                    focused on credit scoring.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>Python</span>
                     <span>AI</span>
                     <span>ML</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/CodeAlpha_CreditScoring"
@@ -1294,9 +1140,7 @@
 
 
 
-            <!-- =================================================
-                 08 SMART HAND GLOVES
-            ================================================== -->
+            <!-- 08 -->
 
             <article class="project-card hidden-project">
 
@@ -1304,38 +1148,29 @@
                     08
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-hand"></i>
                 </div>
-
 
                 <span class="project-category">
                     IoT • Assistive Technology
                 </span>
 
-
                 <h3>
                     Smart Hand Gloves for Blind People
+                    (IoT Based)
                 </h3>
 
-
                 <p>
-
                     An IoT-based assistive technology project
-                    developed to support visually impaired users.
-
+                    designed for visually impaired people.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>IoT</span>
                     <span>Arduino</span>
                     <span>Sensors</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/Smart-Hand-Glove-For-Blind"
@@ -1352,9 +1187,7 @@
 
 
 
-            <!-- =================================================
-                 09 OBSTACLE ROBOT
-            ================================================== -->
+            <!-- 09 -->
 
             <article class="project-card hidden-project">
 
@@ -1362,38 +1195,28 @@
                     09
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-robot"></i>
                 </div>
-
 
                 <span class="project-category">
                     Robotics • Arduino
                 </span>
 
-
                 <h3>
                     Obstacle Avoiding Robot
+                    (Using Arduino)
                 </h3>
 
-
                 <p>
-
-                    An Arduino-based robotic system designed
-                    to detect obstacles and navigate around them.
-
+                    An Arduino-based robotics project for
+                    obstacle detection and avoidance.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>Arduino</span>
-                    <span>Ultrasonic</span>
                     <span>Robotics</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/obstacle-avoiding-robot"
@@ -1410,9 +1233,7 @@
 
 
 
-            <!-- =================================================
-                 10 ENVIRONMENT
-            ================================================== -->
+            <!-- 10 -->
 
             <article class="project-card hidden-project">
 
@@ -1420,39 +1241,28 @@
                     10
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-leaf"></i>
                 </div>
-
 
                 <span class="project-category">
                     IoT
                 </span>
 
-
                 <h3>
-                    IoT-Based Environmental Monitoring System
+                    IoT-Based Environmental
+                    Monitoring System
                 </h3>
 
-
                 <p>
-
                     A sensor-based IoT system for monitoring
-                    environmental conditions through connected
-                    sensing technology.
-
+                    environmental conditions.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>IoT</span>
                     <span>Sensors</span>
-                    <span>Monitoring</span>
-
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System"
@@ -1469,9 +1279,7 @@
 
 
 
-            <!-- =================================================
-                 11 HOSPITAL
-            ================================================== -->
+            <!-- 11 -->
 
             <article class="project-card hidden-project">
 
@@ -1479,40 +1287,30 @@
                     11
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-hospital"></i>
                 </div>
-
 
                 <span class="project-category">
                     Web • Database
                 </span>
 
-
                 <h3>
                     Hospital Management System
+                    (HTML, CSS, JavaScript, SQL, PHP)
                 </h3>
 
-
                 <p>
-
-                    A hospital management application developed
-                    using web technologies and SQL-based database
-                    integration.
-
+                    A hospital management project developed
+                    using web technologies, SQL and PHP.
                 </p>
 
-
                 <div class="project-tech">
-
                     <span>HTML</span>
                     <span>CSS</span>
-                    <span>JavaScript</span>
                     <span>PHP</span>
-
+                    <span>SQL</span>
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/Hospital-Management-System-"
@@ -1529,9 +1327,7 @@
 
 
 
-            <!-- =================================================
-                 12 AI STUDENT ASSISTANT
-            ================================================== -->
+            <!-- 12 -->
 
             <article class="project-card hidden-project">
 
@@ -1539,39 +1335,27 @@
                     12
                 </div>
 
-
                 <div class="project-icon">
                     <i class="fa-solid fa-comments"></i>
                 </div>
-
 
                 <span class="project-category">
                     AI • Chatbot
                 </span>
 
-
                 <h3>
                     AI Student Assistant Chatbot
                 </h3>
 
-
                 <p>
-
-                    An AI-based student assistant project designed
-                    to provide interactive support through
-                    conversational interaction.
-
+                    An AI-based student assistant chatbot
+                    developed as an additional project.
                 </p>
 
-
                 <div class="project-tech">
-
-                    <span>Python</span>
                     <span>AI</span>
-                    <span>Chatbot</span>
-
+                    <span>Python</span>
                 </div>
-
 
                 <a
                     href="https://github.com/takia24/ApexcifyTechnologys_AIStudentAssistantChatbot"
@@ -1587,7 +1371,6 @@
             </article>
 
         </div>
-
 
 
         <div class="view-all-wrapper">
@@ -1610,7 +1393,7 @@
 
 
     <!-- =====================================================
-         RESEARCH & PUBLICATIONS
+         RESEARCH
     ====================================================== -->
 
     <section id="research" class="section research-section">
@@ -1618,20 +1401,14 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 05 // RESEARCH
-
             </div>
-
 
             <h2>
                 Research & Publications
             </h2>
-
 
             <p>
                 Research work in IoT, assistive technology
@@ -1639,7 +1416,6 @@
             </p>
 
         </div>
-
 
 
         <div class="research-grid">
@@ -1651,52 +1427,37 @@
 
 
                 <div class="research-icon">
-
                     <i class="fa-solid fa-hand"></i>
-
                 </div>
 
 
                 <span class="research-status">
-                    IEEE Xplore Publication
+                    Published on IEEE Xplore
                 </span>
 
 
                 <h3>
-
                     HandNav: An IoT-Based Smart Navigation
                     Glove for Visually Impaired People
-
                 </h3>
 
 
                 <p>
-
-                    An IoT-based smart navigation glove developed
-                    as an assistive technology solution for
+                    An IoT-based smart navigation glove for
                     visually impaired people.
-
                 </p>
 
 
                 <div class="research-meta">
 
-
                     <span>
-
                         <i class="fa-solid fa-calendar"></i>
-
                         2026
-
                     </span>
 
-
                     <span>
-
                         <i class="fa-solid fa-building-columns"></i>
-
                         PECCII 2026
-
                     </span>
 
                 </div>
@@ -1724,54 +1485,40 @@
 
 
                 <div class="research-icon">
-
                     <i class="fa-solid fa-shield-halved"></i>
-
                 </div>
 
 
                 <span class="research-status">
-                    Accepted — IEEE CSDE 2026
+                    Accepted for IEEE CSDE 2026
                 </span>
 
 
                 <h3>
-
                     RSMS: A FreeRTOS-Based Priority-Scheduled
                     Architecture for Real-Time Multi-Hazard
                     Detection Using Queue-Driven Task
                     Communication and Bluetooth Alerting
-
                 </h3>
 
 
                 <p>
-
-                    A FreeRTOS-based real-time monitoring architecture
-                    focused on priority scheduling, queue-driven task
-                    communication and Bluetooth alerting.
-
+                    A FreeRTOS-based architecture for real-time
+                    multi-hazard detection using queue-driven
+                    task communication and Bluetooth alerting.
                 </p>
 
 
                 <div class="research-meta">
 
-
                     <span>
-
                         <i class="fa-solid fa-calendar"></i>
-
                         2026
-
                     </span>
 
-
                     <span>
-
                         <i class="fa-solid fa-file-lines"></i>
-
                         IEEE CSDE 2026
-
                     </span>
 
                 </div>
@@ -1802,36 +1549,27 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 06 // JOURNEY
-
             </div>
-
 
             <h2>
                 Experience & Education
             </h2>
 
-
             <p>
-                My academic background, internship experience
-                and project journey.
+                My academic background and professional
+                development experience.
             </p>
 
         </div>
 
 
-
         <div class="experience-grid">
 
 
-            <!-- =================================================
-                 EDUCATION
-            ================================================== -->
+            <!-- EDUCATION -->
 
             <div class="timeline-column">
 
@@ -1845,9 +1583,6 @@
                 </h3>
 
 
-
-                <!-- BSc -->
-
                 <div class="timeline-item">
 
 
@@ -1856,18 +1591,15 @@
 
                     <div class="timeline-content">
 
-
                         <span class="timeline-date">
                             2023 — 2027
                         </span>
 
 
                         <h3>
-
                             Bachelor of Science in
                             Internet of Things and
                             Robotics Engineering
-
                         </h3>
 
 
@@ -1877,21 +1609,13 @@
 
 
                         <p>
-
                             Second Year, Level-3, Term-1.
-                            Academic focus includes IoT, embedded systems,
-                            robotics, artificial intelligence, machine
-                            learning and related engineering technologies.
-
                         </p>
 
                     </div>
 
                 </div>
 
-
-
-                <!-- HSC -->
 
                 <div class="timeline-item">
 
@@ -1901,7 +1625,6 @@
 
                     <div class="timeline-content">
 
-
                         <span class="timeline-date">
                             November 2022
                         </span>
@@ -1909,7 +1632,7 @@
 
                         <h3>
                             Higher Secondary Certificate
-                            Examination — Science
+                            Examination (Science)
                         </h3>
 
 
@@ -1920,10 +1643,8 @@
 
 
                         <p>
-
                             GPA:
                             <strong>5.00 / 5.00</strong>
-
                         </p>
 
                     </div>
@@ -1934,9 +1655,7 @@
 
 
 
-            <!-- =================================================
-                 EXPERIENCE
-            ================================================== -->
+            <!-- EXPERIENCE -->
 
             <div class="timeline-column">
 
@@ -1950,9 +1669,6 @@
                 </h3>
 
 
-
-                <!-- CODEALPHA -->
-
                 <div class="timeline-item">
 
 
@@ -1960,7 +1676,6 @@
 
 
                     <div class="timeline-content">
-
 
                         <span class="timeline-date">
                             July 2025
@@ -1978,20 +1693,15 @@
 
 
                         <p>
-
-                            Internship experience involving
-                            full-stack development projects and
-                            practical software development tasks.
-
+                            Worked on web development projects
+                            and practical software development
+                            tasks during the internship experience.
                         </p>
 
                     </div>
 
                 </div>
 
-
-
-                <!-- PROJECT / RESEARCH -->
 
                 <div class="timeline-item">
 
@@ -2001,28 +1711,25 @@
 
                     <div class="timeline-content">
 
-
                         <span class="timeline-date">
-                            Academic & Independent Work
+                            Academic & Independent Projects
                         </span>
 
 
                         <h3>
-                            IoT, AI & Robotics Projects
+                            IoT, AI & Robotics
                         </h3>
 
 
                         <h4>
-                            Academic Projects & Research
+                            Academic and Independent Projects
                         </h4>
 
 
                         <p>
-
-                            Developed academic and independent projects
-                            across IoT, embedded systems, machine learning,
-                            robotics, computer vision and real-time systems.
-
+                            Developed multiple hardware, software,
+                            machine learning and IoT-based systems
+                            through academic and independent projects.
                         </p>
 
                     </div>
@@ -2038,7 +1745,7 @@
 
 
     <!-- =====================================================
-         CERTIFICATES & ACHIEVEMENTS
+         CERTIFICATES
     ====================================================== -->
 
     <section id="certificates" class="section certificates-section">
@@ -2046,20 +1753,14 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 07 // ACHIEVEMENTS
-
             </div>
-
 
             <h2>
                 Certificates & Achievements
             </h2>
-
 
             <p>
                 Selected certifications, competitions,
@@ -2069,7 +1770,6 @@
         </div>
 
 
-
         <div class="certificates-preview-grid">
 
 
@@ -2077,12 +1777,10 @@
 
             <div class="certificate-preview-card">
 
-
                 <a
                     href="Certificates/Techathon.png"
                     target="_blank"
                     rel="noopener noreferrer">
-
 
                     <div class="certificate-preview-image">
 
@@ -2115,12 +1813,10 @@
 
             <div class="certificate-preview-card">
 
-
                 <a
                     href="Certificates/Volunteer.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
-
 
                     <div class="certificate-pdf-preview">
 
@@ -2142,7 +1838,8 @@
                 <div class="certificate-preview-content">
 
                     <h3>
-                        Volunteer — ROBOFUSION 1.0
+                        Volunteer, WALTON Presents
+                        ROBOFUSION 1.0
                     </h3>
 
                     <p>
@@ -2159,12 +1856,10 @@
 
             <div class="certificate-preview-card">
 
-
                 <a
                     href="Certificates/codealpha_fullstack_internship_2025.jpg"
                     target="_blank"
                     rel="noopener noreferrer">
-
 
                     <div class="certificate-preview-image">
 
@@ -2194,7 +1889,6 @@
         </div>
 
 
-
         <div class="view-all-wrapper">
 
             <a
@@ -2222,143 +1916,93 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 08 // VALUE
-
             </div>
-
 
             <h2>
                 Why Work With Me
             </h2>
 
-
             <p>
-                A multidisciplinary engineering approach that
-                connects hardware, software and intelligent systems.
+                A multidisciplinary engineering approach
+                combining hardware, software and intelligent systems.
             </p>
 
         </div>
 
 
-
         <div class="why-grid">
 
 
-            <!-- IoT -->
-
             <div class="why-card">
 
-
                 <div class="why-icon">
-
                     <i class="fa-solid fa-microchip"></i>
-
                 </div>
-
 
                 <h3>
                     IoT & Embedded Systems
                 </h3>
 
-
                 <p>
-
-                    I work with microcontrollers, sensors and
-                    connected systems to develop practical
-                    IoT-based solutions.
-
+                    Experience with microcontrollers,
+                    sensors and connected IoT systems.
                 </p>
 
             </div>
 
 
-
-            <!-- AI -->
-
             <div class="why-card">
 
-
                 <div class="why-icon">
-
                     <i class="fa-solid fa-brain"></i>
-
                 </div>
-
 
                 <h3>
                     AI & Machine Learning
                 </h3>
 
-
                 <p>
-
-                    I develop machine learning and AI-based
-                    prediction, classification and intelligent
-                    applications.
-
+                    Academic and project work involving
+                    machine learning and AI-based systems.
                 </p>
 
             </div>
 
 
-
-            <!-- ROBOTICS -->
-
             <div class="why-card">
 
-
                 <div class="why-icon">
-
                     <i class="fa-solid fa-robot"></i>
-
                 </div>
-
 
                 <h3>
                     Robotics & Automation
                 </h3>
 
-
                 <p>
-
-                    I explore robotics, sensing, navigation
-                    and automation to solve real-world
-                    engineering problems.
-
+                    Robotics projects involving sensing,
+                    navigation and automated systems.
                 </p>
 
             </div>
 
 
-
-            <!-- RESEARCH -->
-
             <div class="why-card">
 
-
                 <div class="why-icon">
-
                     <i class="fa-solid fa-flask"></i>
-
                 </div>
-
 
                 <h3>
                     Research & Problem Solving
                 </h3>
 
-
                 <p>
-
-                    I enjoy turning real-world challenges into
-                    practical engineering projects and research
-                    solutions.
-
+                    Research and project activities focused
+                    on practical engineering problems.
                 </p>
 
             </div>
@@ -2378,155 +2022,109 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 09 // METHODOLOGY
-
             </div>
-
 
             <h2>
                 Engineering & Development Workflow
             </h2>
 
-
             <p>
-                A practical process for developing IoT,
-                embedded, AI and intelligent technology systems.
+                A structured approach for developing practical
+                IoT, embedded and intelligent technology systems.
             </p>
 
         </div>
 
 
-
         <div class="workflow-grid">
 
 
-            <!-- STEP 01 -->
-
             <div class="workflow-card">
-
 
                 <div class="workflow-number">
                     01
                 </div>
 
-
                 <h3>
                     Problem & Requirements
                 </h3>
 
-
                 <span>
-                    Understand the real-world problem.
+                    Understand the problem and requirements.
                 </span>
 
-
                 <p>
-
-                    Identify the problem, user requirements,
-                    system goals, hardware needs, sensors and
-                    technical constraints.
-
+                    Identify the problem, requirements,
+                    system goals and technical constraints.
                 </p>
 
             </div>
 
 
-
-            <!-- STEP 02 -->
-
             <div class="workflow-card">
-
 
                 <div class="workflow-number">
                     02
                 </div>
 
-
                 <h3>
                     System Design
                 </h3>
 
-
                 <span>
-                    Plan hardware and software architecture.
+                    Plan the system architecture.
                 </span>
 
-
                 <p>
-
-                    Design the system architecture, sensors,
-                    communication, embedded logic, AI/ML
-                    pipeline and software components.
-
+                    Plan hardware, sensors, communication,
+                    software and intelligent system components.
                 </p>
 
             </div>
 
 
-
-            <!-- STEP 03 -->
-
             <div class="workflow-card">
-
 
                 <div class="workflow-number">
                     03
                 </div>
 
-
                 <h3>
                     Build & Integrate
                 </h3>
 
-
                 <span>
-                    Develop and connect the components.
+                    Develop and integrate components.
                 </span>
 
-
                 <p>
-
-                    Develop embedded code, machine learning
-                    models, APIs, web interfaces and integrate
-                    hardware with software.
-
+                    Develop hardware, software, machine learning
+                    models and integrate the system components.
                 </p>
 
             </div>
 
 
-
-            <!-- STEP 04 -->
-
             <div class="workflow-card">
-
 
                 <div class="workflow-number">
                     04
                 </div>
 
-
                 <h3>
                     Test & Optimize
                 </h3>
 
-
                 <span>
-                    Validate and improve the final system.
+                    Test and improve the system.
                 </span>
 
-
                 <p>
-
-                    Test functionality, sensor readings,
-                    model performance, communication and
-                    overall system reliability.
-
+                    Test functionality, identify issues and
+                    optimize the final system.
                 </p>
 
             </div>
@@ -2546,20 +2144,14 @@
 
         <div class="section-heading">
 
-
             <div class="section-tag">
-
                 <span>•</span>
-
                 10 // CONTACT
-
             </div>
-
 
             <h2>
                 Let's Connect
             </h2>
-
 
             <p>
                 Interested in IoT, AI, robotics, research
@@ -2569,11 +2161,8 @@
         </div>
 
 
-
         <div class="contact-grid">
 
-
-            <!-- CONTACT INFO -->
 
             <div class="contact-info">
 
@@ -2584,30 +2173,20 @@
                         Let's build something meaningful.
                     </h3>
 
-
                     <p>
-
-                        I am interested in academic projects,
-                        research activities, internships and
-                        technology-focused collaboration.
-
+                        Feel free to connect with me for
+                        academic, research and technology-related
+                        opportunities.
                     </p>
 
                 </div>
 
 
-
-                <!-- EMAIL -->
-
                 <div class="contact-item">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-solid fa-envelope"></i>
-
                     </div>
-
 
                     <div>
 
@@ -2615,12 +2194,8 @@
                             Email
                         </span>
 
-
-                        <a
-                            href="mailto:takia0001@std.uftb.ac.bd">
-
+                        <a href="mailto:takia0001@std.uftb.ac.bd">
                             takia0001@std.uftb.ac.bd
-
                         </a>
 
                     </div>
@@ -2628,25 +2203,17 @@
                 </div>
 
 
-
-                <!-- GITHUB -->
-
                 <div class="contact-item">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-brands fa-github"></i>
-
                     </div>
-
 
                     <div>
 
                         <span>
                             GitHub
                         </span>
-
 
                         <a
                             href="https://github.com/takia24"
@@ -2662,25 +2229,17 @@
                 </div>
 
 
-
-                <!-- LINKEDIN -->
-
                 <div class="contact-item">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-brands fa-linkedin-in"></i>
-
                     </div>
-
 
                     <div>
 
                         <span>
                             LinkedIn
                         </span>
-
 
                         <a
                             href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a"
@@ -2703,7 +2262,6 @@
 
             <div class="contact-form-card">
 
-
                 <form
                     id="contactForm"
                     class="contact-form">
@@ -2718,7 +2276,6 @@
                                 Your Name
                             </label>
 
-
                             <input
                                 type="text"
                                 id="name"
@@ -2729,13 +2286,11 @@
                         </div>
 
 
-
                         <div class="form-group">
 
                             <label for="email">
                                 Your Email
                             </label>
-
 
                             <input
                                 type="email"
@@ -2749,13 +2304,11 @@
                     </div>
 
 
-
                     <div class="form-group">
 
                         <label for="subject">
                             Subject
                         </label>
-
 
                         <input
                             type="text"
@@ -2767,13 +2320,11 @@
                     </div>
 
 
-
                     <div class="form-group">
 
                         <label for="message">
                             Message
                         </label>
-
 
                         <textarea
                             id="message"
@@ -2783,7 +2334,6 @@
                             required></textarea>
 
                     </div>
-
 
 
                     <button
@@ -2818,18 +2368,15 @@
 
             <div class="footer-brand">
 
-
                 <h3>
-                    Takia<span>.</span>
+                    TAKIA<span>.</span>
                 </h3>
 
-
                 <p>
-                    IoT & Robotics Engineering
+                    Internet of Things & Robotics Engineering
                 </p>
 
             </div>
-
 
 
             <div class="footer-socials">
@@ -2846,7 +2393,6 @@
                 </a>
 
 
-
                 <a
                     href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a"
                     target="_blank"
@@ -2856,7 +2402,6 @@
                     <i class="fa-brands fa-linkedin-in"></i>
 
                 </a>
-
 
 
                 <a
@@ -2870,7 +2415,6 @@
             </div>
 
         </div>
-
 
 
         <div class="footer-bottom">
@@ -2899,6 +2443,7 @@
     ====================================================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 

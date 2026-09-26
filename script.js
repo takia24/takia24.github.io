@@ -1,44 +1,74 @@
 /* =========================================================
-   TAKIA YASMIN PORTFOLIO
-   MAIN JAVASCRIPT
+   TAKIA PORTFOLIO JAVASCRIPT
 ========================================================= */
+
+
+/* =========================================================
+   EMAILJS
+========================================================= */
+
+(function () {
+
+    emailjs.init("ZHBv2b9RSlU5ceFaL");
+
+})();
+
 
 
 /* =========================================================
    TYPING EFFECT
 ========================================================= */
 
-const typingElement = document.getElementById("typing");
+const typingElement =
+    document.getElementById("typing");
 
-const typingRoles = [
+
+const typingTexts = [
+
     "IoT & Embedded Systems Enthusiast",
+
     "AI & Machine Learning Enthusiast",
+
     "Robotics & Automation Enthusiast",
+
     "Smart Systems Developer"
+
 ];
 
-let roleIndex = 0;
+
+let textIndex = 0;
 let charIndex = 0;
-let isDeleting = false;
+let deleting = false;
+
 
 function typeEffect() {
 
     if (!typingElement) return;
 
-    const currentRole = typingRoles[roleIndex];
 
-    if (!isDeleting) {
+    const currentText =
+        typingTexts[textIndex];
+
+
+    if (!deleting) {
 
         typingElement.textContent =
-            currentRole.substring(0, charIndex + 1);
+            currentText.substring(
+                0,
+                charIndex + 1
+            );
 
         charIndex++;
 
-        if (charIndex >= currentRole.length) {
 
-            isDeleting = true;
+        if (charIndex === currentText.length) {
 
-            setTimeout(typeEffect, 1700);
+            deleting = true;
+
+            setTimeout(
+                typeEffect,
+                1500
+            );
 
             return;
         }
@@ -46,486 +76,57 @@ function typeEffect() {
     } else {
 
         typingElement.textContent =
-            currentRole.substring(0, charIndex - 1);
+            currentText.substring(
+                0,
+                charIndex - 1
+            );
 
         charIndex--;
 
-        if (charIndex <= 0) {
 
-            isDeleting = false;
+        if (charIndex === 0) {
 
-            roleIndex =
-                (roleIndex + 1) % typingRoles.length;
+            deleting = false;
+
+            textIndex =
+                (textIndex + 1)
+                % typingTexts.length;
+
         }
+
     }
+
 
     setTimeout(
         typeEffect,
-        isDeleting ? 45 : 85
+        deleting ? 45 : 80
     );
+
 }
 
 
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        typeEffect();
+
+    }
+);
+
+
+
 /* =========================================================
-   PROJECT VIEW ALL / SHOW LESS
+   PROJECT VIEW ALL
 ========================================================= */
 
 function toggleProjects() {
 
     const hiddenProjects =
-        document.querySelectorAll(".hidden-project");
-
-    const button =
-        document.getElementById("projectsToggle");
-
-    if (!hiddenProjects.length || !button) {
-        return;
-    }
-
-    const isShown =
-        hiddenProjects[0]
-            .classList
-            .contains("show-project");
-
-    hiddenProjects.forEach(project => {
-
-        project.classList.toggle(
-            "show-project",
-            !isShown
-        );
-
-    });
-
-    if (!isShown) {
-
-        button.innerHTML =
-            'Show Less <span>−</span>';
-
-    } else {
-
-        button.innerHTML =
-            'View All Projects <span>+</span>';
-
-    }
-}
-
-
-/* =========================================================
-   EMAILJS
-========================================================= */
-
-function initializeEmailJS() {
-
-    if (typeof emailjs !== "undefined") {
-
-        emailjs.init(
-            "ZHBv2b9RSlU5ceFaL"
-        );
-
-        return true;
-    }
-
-    console.warn(
-        "EmailJS library was not loaded."
-    );
-
-    return false;
-}
-
-
-/* =========================================================
-   CONTACT FORM
-========================================================= */
-
-function initializeContactForm() {
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-    if (!contactForm) return;
-
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-            const submitButton =
-                contactForm.querySelector(
-                    'button[type="submit"]'
-                );
-
-            if (!submitButton) return;
-
-
-            const originalButtonText =
-                submitButton.innerHTML;
-
-
-            /* Check EmailJS */
-
-            if (typeof emailjs === "undefined") {
-
-                alert(
-                    "Email service is currently unavailable. Please try again later."
-                );
-
-                return;
-            }
-
-
-            /* Loading state */
-
-            submitButton.disabled = true;
-
-            submitButton.innerHTML =
-                '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-
-
-            /* Send email */
-
-            emailjs.sendForm(
-                "service_na1vmlo",
-                "template_abokmli",
-                contactForm
-            )
-
-            .then(function () {
-
-                alert(
-                    "Message sent successfully! Thank you for contacting me."
-                );
-
-                contactForm.reset();
-
-                submitButton.disabled = false;
-
-                submitButton.innerHTML =
-                    originalButtonText;
-
-            })
-
-            .catch(function (error) {
-
-                console.error(
-                    "EmailJS Error:",
-                    error
-                );
-
-                alert(
-                    "Failed to send message. Please try again later."
-                );
-
-                submitButton.disabled = false;
-
-                submitButton.innerHTML =
-                    originalButtonText;
-
-            });
-
-        }
-    );
-}
-
-
-/* =========================================================
-   RESUME / CV EMAIL NOTIFICATION
-========================================================= */
-
-function sendMail(event) {
-
-    /*
-       Prevent the default link temporarily.
-       We send a small EmailJS notification first,
-       then open the resume.
-    */
-
-    if (event) {
-        event.preventDefault();
-    }
-
-    const resumeLink =
-        event
-            ? event.currentTarget.getAttribute("href")
-            : "Takia_Yasmin_Resume.pdf";
-
-
-    if (typeof emailjs === "undefined") {
-
-        window.open(
-            resumeLink,
-            "_blank"
-        );
-
-        return;
-    }
-
-
-    emailjs.send(
-        "service_na1vmlo",
-        "template_abokmli",
-        {
-            name: "Portfolio Visitor",
-            email: "portfolio@visitor.com",
-            subject: "Resume Viewed",
-            message:
-                "Someone viewed/downloaded Takia Yasmin's resume from the portfolio."
-        }
-    )
-    .finally(function () {
-
-        window.open(
-            resumeLink,
-            "_blank"
-        );
-
-    });
-
-}
-
-
-/* =========================================================
-   SMOOTH SCROLL
-========================================================= */
-
-function initializeSmoothScroll() {
-
-    const anchors =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
-
-    anchors.forEach(anchor => {
-
-        anchor.addEventListener(
-            "click",
-            function (event) {
-
-                const targetId =
-                    this.getAttribute("href");
-
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
-                }
-
-
-                const target =
-                    document.querySelector(
-                        targetId
-                    );
-
-
-                if (!target) {
-                    return;
-                }
-
-
-                event.preventDefault();
-
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-
-                /* Close mobile menu */
-
-                const nav =
-                    document.querySelector(
-                        ".nav-links"
-                    );
-
-                const menuButton =
-                    document.querySelector(
-                        ".menu-toggle"
-                    );
-
-
-                if (nav) {
-                    nav.classList.remove(
-                        "active"
-                    );
-                }
-
-                if (menuButton) {
-                    menuButton.classList.remove(
-                        "active"
-                    );
-                }
-
-            }
-        );
-
-    });
-
-}
-
-
-/* =========================================================
-   ACTIVE NAVBAR LINK
-========================================================= */
-
-function initializeActiveNavigation() {
-
-    const sections =
-        document.querySelectorAll(
-            "section[id]"
-        );
-
-    const navLinks =
-        document.querySelectorAll(
-            ".nav-links a"
-        );
-
-    if (!sections.length || !navLinks.length) {
-        return;
-    }
-
-
-    function updateActiveLink() {
-
-        let currentSection = "";
-
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 150;
-
-            const sectionBottom =
-                sectionTop +
-                section.offsetHeight;
-
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionBottom
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(link => {
-
-            link.classList.remove(
-                "active"
-            );
-
-
-            const href =
-                link.getAttribute("href");
-
-
-            if (
-                href ===
-                "#" + currentSection
-            ) {
-
-                link.classList.add(
-                    "active"
-                );
-
-            }
-
-        });
-
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        updateActiveLink
-    );
-
-    updateActiveLink();
-}
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-function initializeMobileMenu() {
-
-    const menuButton =
-        document.querySelector(
-            ".menu-toggle"
-        );
-
-    const nav =
-        document.querySelector(
-            ".nav-links"
-        );
-
-
-    if (!menuButton || !nav) {
-        return;
-    }
-
-
-    menuButton.addEventListener(
-        "click",
-        function () {
-
-            nav.classList.toggle(
-                "active"
-            );
-
-            menuButton.classList.toggle(
-                "active"
-            );
-
-        }
-    );
-
-
-    /* Close menu after clicking a link */
-
-    const navItems =
-        nav.querySelectorAll("a");
-
-
-    navItems.forEach(item => {
-
-        item.addEventListener(
-            "click",
-            function () {
-
-                nav.classList.remove(
-                    "active"
-                );
-
-                menuButton.classList.remove(
-                    "active"
-                );
-
-            }
-        );
-
-    });
-
-}
-
-
-/* =========================================================
-   INITIAL PROJECT STATE
-========================================================= */
-
-function initializeProjects() {
-
-    const hiddenProjects =
         document.querySelectorAll(
             ".hidden-project"
         );
+
 
     const button =
         document.getElementById(
@@ -533,59 +134,308 @@ function initializeProjects() {
         );
 
 
-    hiddenProjects.forEach(project => {
-
-        project.classList.remove(
-            "show-project"
-        );
-
-    });
-
-
-    if (button) {
-
-        button.innerHTML =
-            'View All Projects <span>+</span>';
-
+    if (!hiddenProjects.length || !button) {
+        return;
     }
+
+
+    const isShown =
+        hiddenProjects[0]
+            .classList
+            .contains("show-project");
+
+
+    hiddenProjects.forEach(
+        project => {
+
+            project.classList.toggle(
+                "show-project",
+                !isShown
+            );
+
+        }
+    );
+
+
+    button.innerHTML =
+        !isShown
+
+        ? 'Show Less <span>−</span>'
+
+        : 'View All Projects <span>+</span>';
 
 }
 
 
+
 /* =========================================================
-   INITIALIZE EVERYTHING
+   PROJECT INITIAL STATE
 ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        /* Typing */
-        typeEffect();
+        document
+            .querySelectorAll(
+                ".hidden-project"
+            )
+            .forEach(
+                project => {
 
+                    project.classList.remove(
+                        "show-project"
+                    );
 
-        /* Projects */
-        initializeProjects();
-
-
-        /* EmailJS */
-        initializeEmailJS();
-
-
-        /* Contact */
-        initializeContactForm();
-
-
-        /* Smooth scrolling */
-        initializeSmoothScroll();
-
-
-        /* Active navigation */
-        initializeActiveNavigation();
-
-
-        /* Mobile menu */
-        initializeMobileMenu();
+                }
+            );
 
     }
 );
+
+
+
+/* =========================================================
+   CONTACT FORM — EMAILJS
+========================================================= */
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const button =
+                contactForm.querySelector(
+                    ".submit-btn"
+                );
+
+
+            const originalText =
+                button.innerHTML;
+
+
+            button.innerHTML =
+                '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            button.disabled = true;
+
+
+            emailjs
+                .sendForm(
+                    "service_na1vmlo",
+                    "template_abokmli",
+                    contactForm
+                )
+
+                .then(
+                    function () {
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-check"></i> Message Sent';
+
+                        contactForm.reset();
+
+
+                        setTimeout(
+                            function () {
+
+                                button.innerHTML =
+                                    originalText;
+
+                                button.disabled =
+                                    false;
+
+                            },
+                            2500
+                        );
+
+                    },
+
+                    function (error) {
+
+                        console.error(
+                            "EmailJS Error:",
+                            error
+                        );
+
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-xmark"></i> Failed to Send';
+
+
+                        setTimeout(
+                            function () {
+
+                                button.innerHTML =
+                                    originalText;
+
+                                button.disabled =
+                                    false;
+
+                            },
+                            2500
+                        );
+
+                    }
+                );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuToggle =
+    document.querySelector(
+        ".menu-toggle"
+    );
+
+
+const navLinks =
+    document.querySelector(
+        ".nav-links"
+    );
+
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            navLinks.classList.toggle(
+                "mobile-open"
+            );
+
+        }
+    );
+
+
+    navLinks
+        .querySelectorAll("a")
+        .forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "mobile-open"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        let currentSection = "";
+
+
+        sections.forEach(
+            section => {
+
+                const sectionTop =
+                    section.offsetTop - 150;
+
+
+                if (
+                    window.scrollY >=
+                    sectionTop
+                ) {
+
+                    currentSection =
+                        section.getAttribute(
+                            "id"
+                        );
+
+                }
+
+            }
+        );
+
+
+        navigationLinks.forEach(
+            link => {
+
+                link.classList.remove(
+                    "active"
+                );
+
+
+                if (
+                    link.getAttribute(
+                        "href"
+                    ) ===
+                    "#" + currentSection
+                ) {
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   RESUME CLICK NOTIFICATION
+========================================================= */
+
+function sendMail(event) {
+
+    /*
+       Resume opens normally.
+       This function keeps compatibility
+       with the previous portfolio setup.
+    */
+
+    return true;
+
+}
