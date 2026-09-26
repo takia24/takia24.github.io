@@ -5,971 +5,2092 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Takia Yasmin | Portfolio</title>
+    <title>Takia Yasmin | IoT & AI Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
-    <nav>
+    <!-- Background -->
+    <div class="bg-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
 
-        <h2>Takia</h2>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <!-- ================= NAVBAR ================= -->
 
-            <li>
-                <button id="themeToggle">🌙</button>
-            </li>
-        </ul>
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                TAKIA<span>.</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <a href="#contact" class="talk-btn">
+                    Let's Talk
+                </a>
+
+                <a
+                    href="#"
+                    class="resume-btn"
+                    onclick="sendResume(event)"
+                >
+                    <i class="fa-regular fa-file-lines"></i>
+                    CV / Resume
+                </a>
+
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
 
     </nav>
 
 
     <!-- ================= HERO ================= -->
-    <header>
 
-        <div class="hero-text">
+    <main id="home">
 
-            <h1>Takia Yasmin</h1>
+        <section class="hero section-container">
 
-            <h2>
-                <span id="typing"></span>
-            </h2>
+            <div class="hero-content">
 
-            <p id="hero-desc"></p>
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#"
-                    onclick="sendMail(event)"
-                    class="btn-outline"
-                >
-                    Resume
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="profile-wrapper">
-
-            <div class="profile-ring">
-
-                <img
-                    src="images/profile.jpg"
-                    alt="Takia Yasmin"
-                    class="profile-img"
-                >
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="about-section">
-
-        <h2>About Me</h2>
-
-        <p>
-            Undergraduate student of Internet of Things and Robotics Engineering
-            with strong interest in IoT systems, embedded technologies, and smart
-            device development.
-        </p>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-    <section id="skills">
-
-        <h2>Computer & Technical Skills</h2>
-
-        <div class="skills-grid">
-
-
-            <!-- Programming -->
-            <div class="skill-card">
-
-                <h3>Programming Languages</h3>
-
-                <div class="skill-bar">
-                    <p>C</p>
-                    <div class="bar">
-                        <span style="width:90%"></span>
-                    </div>
+                <div class="availability">
+                    <span></span>
+                    Available for Opportunities
                 </div>
 
-                <div class="skill-bar">
-                    <p>C++</p>
-                    <div class="bar">
-                        <span style="width:85%"></span>
-                    </div>
+                <div class="section-number">
+                    <span>01</span> // INTRODUCTION
                 </div>
 
-                <div class="skill-bar">
-                    <p>Java</p>
-                    <div class="bar">
-                        <span style="width:80%"></span>
-                    </div>
+                <h1>
+                    Building
+                    <span>Smart Systems</span>
+                    That Connect Technology With The Real World.
+                </h1>
+
+                <h2>
+                    <span id="typing"></span>
+                </h2>
+
+                <p class="hero-description">
+                    I'm Takia Yasmin, an Internet of Things and Robotics
+                    Engineering student passionate about IoT, embedded
+                    systems, artificial intelligence, robotics, and
+                    intelligent automation.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-btn">
+                        View My Projects
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#contact" class="secondary-btn">
+                        Let's Connect
+                        <i class="fa-regular fa-message"></i>
+                    </a>
+
+                    <a
+                        href="Takia_Yasmin_Resume.pdf"
+                        target="_blank"
+                        class="download-link"
+                    >
+                        <i class="fa-solid fa-download"></i>
+                        Download CV
+                    </a>
+
                 </div>
 
-                <div class="skill-bar">
-                    <p>Python</p>
-                    <div class="bar">
-                        <span style="width:75%"></span>
+
+                <!-- Stats -->
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>15+</strong>
+                        <span>Projects</span>
                     </div>
+
+                    <div class="stat">
+                        <strong>2</strong>
+                        <span>Research Papers</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>IoT + AI</strong>
+                        <span>Focus Area</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>2026</strong>
+                        <span>Research</span>
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <!-- Web -->
-            <div class="skill-card">
+            <!-- Profile -->
 
-                <h3>Web Technologies</h3>
+            <div class="hero-profile">
 
-                <div class="skill-bar">
-                    <p>HTML</p>
-                    <div class="bar">
-                        <span style="width:95%"></span>
+                <div class="profile-card">
+
+                    <div class="profile-top">
+                        <span>TAKIA.YASMIN</span>
+                        <span class="online-dot"></span>
                     </div>
-                </div>
 
-                <div class="skill-bar">
-                    <p>CSS</p>
-                    <div class="bar">
-                        <span style="width:90%"></span>
+                    <div class="profile-image-wrapper">
+
+                        <div class="profile-orbit orbit-one"></div>
+                        <div class="profile-orbit orbit-two"></div>
+
+                        <div class="profile-circle">
+
+                            <img
+                                src="images/profile.jpg"
+                                alt="Takia Yasmin"
+                            >
+
+                        </div>
+
                     </div>
-                </div>
 
-                <div class="skill-bar">
-                    <p>JavaScript</p>
-                    <div class="bar">
-                        <span style="width:80%"></span>
+                    <div class="profile-tags">
+
+                        <span>
+                            <i class="fa-solid fa-microchip"></i>
+                            IoT
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-brain"></i>
+                            AI
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-robot"></i>
+                            Robotics
+                        </span>
+
                     </div>
-                </div>
 
-                <div class="skill-bar">
-                    <p>PHP</p>
-                    <div class="bar">
-                        <span style="width:70%"></span>
+                    <div class="profile-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Bangladesh
+                        </span>
+
+                        <span>
+                            UTC+6
+                        </span>
+
                     </div>
-                </div>
 
-            </div>
-
-
-            <!-- IoT -->
-            <div class="skill-card">
-
-                <h3>IoT & Embedded</h3>
-
-                <div class="skill-bar">
-                    <p>Arduino</p>
-                    <div class="bar">
-                        <span style="width:92%"></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <p>ESP32</p>
-                    <div class="bar">
-                        <span style="width:88%"></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <p>IoT Systems</p>
-                    <div class="bar">
-                        <span style="width:85%"></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <p>Embedded Design</p>
-                    <div class="bar">
-                        <span style="width:80%"></span>
-                    </div>
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- Tools -->
-            <div class="skill-card">
 
-                <h3>Tools & IDEs</h3>
+        <!-- ================= ABOUT ================= -->
 
-                <div class="skill-bar">
-                    <p>VS Code</p>
-                    <div class="bar">
-                        <span style="width:95%"></span>
-                    </div>
+        <section id="about" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>02</span> // PROFILE
                 </div>
 
-                <div class="skill-bar">
-                    <p>Arduino IDE</p>
-                    <div class="bar">
-                        <span style="width:92%"></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <p>IntelliJ IDEA</p>
-                    <div class="bar">
-                        <span style="width:80%"></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <p>Eclipse</p>
-                    <div class="bar">
-                        <span style="width:70%"></span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects">
-
-        <h2>Projects</h2>
-
-
-        <!-- 2026 / Featured -->
-        <div class="project-row">
-
-            <span>
-                Materna: Smart Maternal Health Monitoring System
-            </span>
-
-            <a
-                href="https://github.com/takia24/Materna-Health-Monitoring"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <div class="project-row">
-
-            <span>
-                Smart Human-Following Shopping Trolley
-            </span>
-
-            <a
-                href="https://github.com/takia24/Smart-Human-Following-Shopping-Trolley"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- RTOS -->
-        <div class="project-row">
-
-            <span>
-                RTOS Based Safety Monitoring System
-            </span>
-
-            <a
-                href="https://github.com/takia24/RTOS-Based-Safety-Monitoring-System"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Environmental Monitoring -->
-        <div class="project-row">
-
-            <span>
-                IoT-Based Environmental Monitoring System
-            </span>
-
-            <a
-                href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Motion Detection -->
-        <div class="project-row">
-
-            <span>
-                IoT-Based Motion Detection System
-            </span>
-
-            <a
-                href="https://github.com/takia24/IoT-Based-Motion-Detection-ESP8266"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- MQTT -->
-        <div class="project-row">
-
-            <span>
-                MQTT Communication using ESP32
-            </span>
-
-            <a
-                href="https://github.com/takia24/MQTT-Communication-ESP32"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Smart Parking -->
-        <div class="project-row">
-
-            <span>
-                Smart Parking System Using Arduino
-            </span>
-
-            <a
-                href="https://github.com/takia24/Smart-Parking-System-Using-Arduino"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Obstacle Robot -->
-        <div class="project-row">
-
-            <span>
-                Obstacle Avoiding Robot
-            </span>
-
-            <a
-                href="https://github.com/takia24/obstacle-avoiding-robot"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Smart Glove -->
-        <div class="project-row">
-
-            <span>
-                Smart Hand Glove for Blind People
-            </span>
-
-            <a
-                href="https://github.com/takia24/Smart-Hand-Glove-For-Blind"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Crop Prediction -->
-        <div class="project-row">
-
-            <span>
-                Crop Prediction System (ML)
-            </span>
-
-            <div>
-
-                <a
-                    href="https://github.com/takia24/crop-prediction-ml/tree/main/CropPrediction"
-                    target="_blank"
-                >
-                    View Project
-                </a>
-
-                <a
-                    href="https://crop-prediction-ml-g0q0.onrender.com/"
-                    target="_blank"
-                >
-                    Live Demo
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- Hospital Management -->
-        <div class="project-row">
-
-            <span>
-                Hospital Management System
-            </span>
-
-            <a
-                href="https://github.com/takia24/Hospital-Management-System-"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Clap Switch -->
-        <div class="project-row">
-
-            <span>
-                Clap Switch (Sound-Based Light Control)
-            </span>
-
-            <a
-                href="https://github.com/takia24/ClapSwitch"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Social Media -->
-        <div class="project-row">
-
-            <span>
-                Social Media Platform (CodeAlpha Internship)
-            </span>
-
-            <a
-                href="https://github.com/takia24/CodeAlpha_SocialMediaPlatform"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- E-Commerce -->
-        <div class="project-row">
-
-            <span>
-                Simple E-Commerce Store (CodeAlpha Internship)
-            </span>
-
-            <a
-                href="https://github.com/takia24/CodeAlpha_SimpleEcommerceStore"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Laravel CRUD -->
-        <div class="project-row">
-
-            <span>
-                Laravel CRUD Application
-            </span>
-
-            <a
-                href="https://github.com/takia24/laravelCRUD"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Laravel Blog -->
-        <div class="project-row">
-
-            <span>
-                Laravel Blog Management System
-            </span>
-
-            <a
-                href="https://github.com/takia24/Laravel_blogs-5-6-2025-"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-
-        <!-- Frontend -->
-        <div class="project-row">
-
-            <span>
-                Frontend Integration & User Interaction
-            </span>
-
-            <a
-                href="https://github.com/takia24/Frontend-Integration-and-User-Interaction"
-                target="_blank"
-            >
-                View Project
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= RESEARCH PUBLICATIONS ================= -->
-    <section id="research">
-
-        <h2>Research Publications</h2>
-
-
-        <!-- HandNav -->
-        <div class="project-row">
-
-            <div>
-
-                <strong>
-                    HandNav: An IoT-Based Smart Navigation Glove
-                    for Visually Impaired People
-                </strong>
+                <h2>About Me</h2>
 
                 <p>
-                    Published on IEEE Xplore; Presented at PECCII 2026
+                    Engineering ideas into practical and intelligent
+                    technology solutions.
                 </p>
 
             </div>
 
-            <a
-                href="https://lnkd.in/gqdwcHD4"
-                target="_blank"
-            >
-                View Paper
-            </a>
 
-        </div>
+            <div class="about-grid">
+
+                <div class="about-main glass-card">
+
+                    <h3>
+                        IoT, AI & Embedded Systems Enthusiast
+                    </h3>
+
+                    <p>
+                        I am Takia Yasmin, an undergraduate student of
+                        Internet of Things and Robotics Engineering at
+                        the University of Frontier Technology, Bangladesh.
+                    </p>
+
+                    <p>
+                        My interests include IoT systems, embedded
+                        development, artificial intelligence, machine
+                        learning, robotics, automation, and intelligent
+                        monitoring systems.
+                    </p>
+
+                    <p>
+                        I enjoy transforming real-world problems into
+                        practical technology solutions by combining
+                        hardware, software, sensors, communication,
+                        and intelligent algorithms.
+                    </p>
+
+                    <div class="about-checks">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Embedded & IoT Systems
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            AI & Machine Learning
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Robotics & Automation
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Web & API Integration
+                        </span>
+
+                    </div>
+
+                </div>
 
 
-        <!-- RSMS -->
-        <div class="project-row">
+                <div class="about-mini-grid">
 
-            <div>
+                    <div class="mini-card">
+                        <strong>IoT</strong>
+                        <span>Smart Connected Systems</span>
+                    </div>
 
-                <strong>
-                    RSMS: A FreeRTOS-Based Priority-Scheduled
-                    Architecture for Real-Time Multi-Hazard Detection
-                    Using Queue-Driven Task Communication and
-                    Bluetooth Alerting
-                </strong>
+                    <div class="mini-card">
+                        <strong>AI</strong>
+                        <span>Prediction & Intelligent Systems</span>
+                    </div>
+
+                    <div class="mini-card">
+                        <strong>Robotics</strong>
+                        <span>Automation & Control</span>
+                    </div>
+
+                    <div class="mini-card">
+                        <strong>Embedded</strong>
+                        <span>Microcontrollers & Sensors</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>03</span> // TECHNOLOGY
+                </div>
+
+                <h2>Technical Skills</h2>
 
                 <p>
-                    Accepted for IEEE CSDE 2026
+                    Technologies, tools, and platforms I use to build
+                    intelligent systems.
                 </p>
 
             </div>
 
-        </div>
 
-    </section>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>Programming</h3>
+
+                    <div class="skill-tags">
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                    </div>
+
+                </div>
 
 
-    <!-- ================= ACHIEVEMENTS ================= -->
-    <section id="achievements">
+                <div class="skill-card">
 
-        <h2>Achievements & Certifications</h2>
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <h3>IoT & Embedded</h3>
+
+                    <div class="skill-tags">
+                        <span>ESP32</span>
+                        <span>Arduino</span>
+                        <span>Embedded Systems</span>
+                        <span>IoT</span>
+                    </div>
+
+                </div>
 
 
-        <!-- 2026 Volunteer -->
-        <div class="achievement-card">
+                <div class="skill-card">
 
-            <span>
-                Volunteer – Certificate of Appreciation,
-                WALTON Presents ROBOFUSION 1.0 (2026)
-            </span>
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
 
-            <a
-                href="Certificates/Volunteer.pdf"
-                target="_blank"
+                    <h3>AI & Machine Learning</h3>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>ML</span>
+                        <span>Deep Learning</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <h3>Web & Backend</h3>
+
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Flask</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <h3>Database & Cloud</h3>
+
+                    <div class="skill-tags">
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                        <span>ThingSpeak</span>
+                        <span>REST API</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3>Tools</h3>
+
+                    <div class="skill-tags">
+                        <span>VS Code</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Arduino IDE</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>04</span> // PORTFOLIO
+                </div>
+
+                <h2>Selected Projects</h2>
+
+                <p>
+                    A selection of IoT, AI, embedded, robotics, and
+                    software projects.
+                </p>
+
+            </div>
+
+
+            <!-- FIRST 3 PROJECTS -->
+
+            <div class="projects-grid">
+
+
+                <!-- Materna -->
+
+                <article class="project-card">
+
+                    <div class="project-visual maternal">
+
+                        <div class="project-label">
+                            PROJECT 01
+                        </div>
+
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+
+                        <div class="visual-code">
+                            IoT • AI • ESP32
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">
+                            IoT + AI
+                        </span>
+
+                        <h3>
+                            Materna
+                        </h3>
+
+                        <p>
+                            An intelligent IoT and AI-based maternal
+                            health monitoring, risk prediction and
+                            emergency alert system.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>IoT</span>
+                            <span>AI/ML</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/takia24/Materna-Health-Monitoring"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Shopping Trolley -->
+
+                <article class="project-card">
+
+                    <div class="project-visual trolley">
+
+                        <div class="project-label">
+                            PROJECT 02
+                        </div>
+
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+
+                        <div class="visual-code">
+                            ESP32 • RFID • IoT
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">
+                            IoT + Robotics
+                        </span>
+
+                        <h3>
+                            Smart Human-Following Shopping Trolley
+                        </h3>
+
+                        <p>
+                            An IoT-based smart shopping trolley concept
+                            combining human following, automated billing,
+                            navigation, and obstacle detection.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>RFID</span>
+                            <span>Robotics</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/takia24/Smart-Human-Following-Shopping-Trolley"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Crop -->
+
+                <article class="project-card">
+
+                    <div class="project-visual crop">
+
+                        <div class="project-label">
+                            PROJECT 03
+                        </div>
+
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <div class="visual-code">
+                            PYTHON • ML • FLASK
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">
+                            Machine Learning
+                        </span>
+
+                        <h3>
+                            Crop Prediction System
+                        </h3>
+
+                        <p>
+                            A machine learning web application that
+                            predicts suitable crops based on soil and
+                            environmental parameters.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>ML</span>
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a
+                                href="https://github.com/takia24/crop-prediction-ml/tree/main/CropPrediction"
+                                target="_blank"
+                                class="project-btn"
+                            >
+                                View Project
+                            </a>
+
+                            <a
+                                href="https://crop-prediction-ml-g0q0.onrender.com/"
+                                target="_blank"
+                                class="project-btn secondary-project-btn"
+                            >
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- ================= MORE PROJECTS ================= -->
+
+            <div
+                class="projects-grid more-projects"
+                id="moreProjects"
             >
-                View
-            </a>
 
-        </div>
 
+                <article class="project-card">
 
-        <!-- 2026 Techathon -->
-        <div class="achievement-card">
+                    <div class="project-visual blue">
+                        <div class="project-label">PROJECT 04</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="visual-code">FREE RTOS</div>
+                    </div>
 
-            <span>
-                Participant – Certificate of Participation,
-                WALTON Presents ROBOFUSION 1.0 Techathon (2026)
-            </span>
+                    <div class="project-content">
 
-            <a
-                href="Certificates/Techathon.png"
-                target="_blank"
-            >
-                View
-            </a>
+                        <span class="project-type">Embedded Systems</span>
 
-        </div>
+                        <h3>
+                            RTOS Based Safety Monitoring System
+                        </h3>
 
+                        <p>
+                            Real-time safety monitoring concept using
+                            FreeRTOS task scheduling and sensor-based
+                            alert communication.
+                        </p>
 
-        <!-- 2026 HandNav Presentation -->
-        <div class="achievement-card">
+                        <div class="project-tags">
+                            <span>FreeRTOS</span>
+                            <span>ESP32</span>
+                            <span>Bluetooth</span>
+                        </div>
 
-            <span>
-                HandNav – Certificate of Presentation,
-                PECCII 2026
-            </span>
+                        <a
+                            href="https://github.com/takia24/RTOS-Based-Safety-Monitoring-System"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-            <a
-                href="Certificates/HandGloves_paper_certificate.jpeg"
-                target="_blank"
-            >
-                View
-            </a>
+                    </div>
 
-        </div>
+                </article>
 
 
-        <!-- 2025 -->
-        <div class="achievement-card">
+                <article class="project-card">
 
-            <span>
-                Top 30 Finalist – Mugen Society Short Story Contest (2025)
-            </span>
+                    <div class="project-visual cyan">
+                        <div class="project-label">PROJECT 05</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                        </div>
+                        <div class="visual-code">IoT MONITORING</div>
+                    </div>
 
-            <a
-                href="Certificates/mugen_short_story_finalist_2025.pdf"
-                target="_blank"
-            >
-                View
-            </a>
+                    <div class="project-content">
 
-        </div>
+                        <span class="project-type">IoT</span>
 
+                        <h3>
+                            Environmental Monitoring System
+                        </h3>
 
-        <div class="achievement-card">
+                        <p>
+                            Sensor-based environmental monitoring system
+                            designed for collecting and monitoring
+                            real-time environmental data.
+                        </p>
 
-            <span>
-                Participant – Mugen Society Tech Olympiad (2025)
-            </span>
+                        <div class="project-tags">
+                            <span>IoT</span>
+                            <span>Sensors</span>
+                            <span>Arduino</span>
+                        </div>
 
-            <a
-                href="Certificates/mugen_tech_olympiad_participant_2025.pdf"
-                target="_blank"
-            >
-                View
-            </a>
+                        <a
+                            href="https://github.com/takia24/IoT-Based-Environmental-Monitoring-System"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-        </div>
+                    </div>
 
+                </article>
 
-        <div class="achievement-card">
 
-            <span>
-                Integration Bee (Senior) –
-                Certificate of Participation (2025)
-            </span>
+                <article class="project-card">
 
-            <a
-                href="Certificates/integration_bee_senior_2025.pdf"
-                target="_blank"
-            >
-                View
-            </a>
+                    <div class="project-visual purple">
+                        <div class="project-label">PROJECT 06</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-person-running"></i>
+                        </div>
+                        <div class="visual-code">ESP8266</div>
+                    </div>
 
-        </div>
+                    <div class="project-content">
 
+                        <span class="project-type">IoT</span>
+
+                        <h3>
+                            IoT Motion Detection System
+                        </h3>
+
+                        <p>
+                            Motion detection system using IoT hardware
+                            for sensor-based monitoring and notification.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>ESP8266</span>
+                            <span>Sensor</span>
+                            <span>IoT</span>
+                        </div>
 
-        <div class="achievement-card">
+                        <a
+                            href="https://github.com/takia24/IoT-Based-Motion-Detection-ESP8266"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-            <span>
-                CodeAlpha Full Stack Development Internship –
-                Certificate of Completion (2025)
-            </span>
+                    </div>
 
-            <a
-                href="Certificates/codealpha_fullstack_internship_2025.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                </article>
 
-        </div>
 
+                <article class="project-card">
 
-        <!-- 2024 -->
-        <div class="achievement-card">
+                    <div class="project-visual blue">
+                        <div class="project-label">PROJECT 07</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="visual-code">MQTT • ESP32</div>
+                    </div>
 
-            <span>
-                15th National Undergraduate Mathematics Olympiad –
-                Certificate of Participation (2024)
-            </span>
+                    <div class="project-content">
 
-            <a
-                href="Certificates/math_olympiad_2024.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                        <span class="project-type">Communication</span>
 
-        </div>
+                        <h3>
+                            MQTT Communication using ESP32
+                        </h3>
 
+                        <p>
+                            IoT communication project using MQTT and ESP32
+                            for device-to-device data exchange.
+                        </p>
 
-        <div class="achievement-card">
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>MQTT</span>
+                            <span>IoT</span>
+                        </div>
 
-            <span>
-                Robotics Camp – Certificate of Participation (2024)
-            </span>
+                        <a
+                            href="https://github.com/takia24/MQTT-Communication-ESP32"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-            <a
-                href="Certificates/robotics_camp_2024.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                    </div>
 
-        </div>
+                </article>
 
 
-        <!-- 2025 -->
-        <div class="achievement-card">
+                <article class="project-card">
 
-            <span>
-                Bangladesh Economics Olympiad –
-                Preliminary Selection Round (2025)
-            </span>
+                    <div class="project-visual cyan">
+                        <div class="project-label">PROJECT 08</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-square-parking"></i>
+                        </div>
+                        <div class="visual-code">ARDUINO</div>
+                    </div>
 
-            <a
-                href="Certificates/bangladesh_economics_olympiad_2025.pdf"
-                target="_blank"
-            >
-                View
-            </a>
+                    <div class="project-content">
 
-        </div>
+                        <span class="project-type">Automation</span>
 
+                        <h3>
+                            Smart Parking System
+                        </h3>
 
-        <!-- 2023 -->
-        <div class="achievement-card">
+                        <p>
+                            Arduino-based smart parking concept for
+                            detecting and managing available parking
+                            spaces.
+                        </p>
 
-            <span>
-                Digital Literacy Course for Youth –
-                Digital Literacy Center (2023)
-            </span>
+                        <div class="project-tags">
+                            <span>Arduino</span>
+                            <span>Ultrasonic</span>
+                            <span>Automation</span>
+                        </div>
 
-            <a
-                href="Certificates/digital_literacy_2023.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                        <a
+                            href="https://github.com/takia24/Smart-Parking-System-Using-Arduino"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-        </div>
+                    </div>
 
+                </article>
 
-        <div class="achievement-card">
 
-            <span>
-                21st Century Skilling Program –
-                Intermediate (2023)
-            </span>
+                <article class="project-card">
 
-            <a
-                href="Certificates/Wadhwani.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                    <div class="project-visual purple">
+                        <div class="project-label">PROJECT 09</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="visual-code">ROBOTICS</div>
+                    </div>
 
-        </div>
+                    <div class="project-content">
 
+                        <span class="project-type">Robotics</span>
 
-        <!-- 2017 -->
-        <div class="achievement-card">
+                        <h3>
+                            Obstacle Avoiding Robot
+                        </h3>
 
-            <span>
-                Best Reader Award – Bishwo Sahitya Kendra (2017)
-            </span>
+                        <p>
+                            Autonomous robot concept using sensors to
+                            detect obstacles and navigate safely.
+                        </p>
 
-            <a
-                href="Certificates/SEQAEP.jpg"
-                target="_blank"
-            >
-                View
-            </a>
+                        <div class="project-tags">
+                            <span>Arduino</span>
+                            <span>Ultrasonic</span>
+                            <span>Robot</span>
+                        </div>
 
-        </div>
+                        <a
+                            href="https://github.com/takia24/obstacle-avoiding-robot"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-    </section>
+                    </div>
 
+                </article>
 
-    <!-- ================= EDUCATION ================= -->
-    <section id="education">
 
-        <h2>Education</h2>
+                <article class="project-card">
 
-        <p>
-            <strong>
-                University of Frontier Technology, Bangladesh
-            </strong>
-            <br>
+                    <div class="project-visual blue">
+                        <div class="project-label">PROJECT 10</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-hand"></i>
+                        </div>
+                        <div class="visual-code">SMART GLOVE</div>
+                    </div>
 
-            B.Sc. in Internet of Things and Robotics Engineering
-            (2023–2027)
-        </p>
+                    <div class="project-content">
 
+                        <span class="project-type">Assistive Technology</span>
 
-        <p>
-            <strong>
-                Nalitabari Shaheed Abdur Rashid Mohila College
-            </strong>
-            <br>
+                        <h3>
+                            Smart Hand Glove for Blind People
+                        </h3>
 
-            HSC – Science | GPA: 5.00
-        </p>
+                        <p>
+                            Smart assistive glove concept designed to help
+                            visually impaired people detect nearby obstacles.
+                        </p>
 
-    </section>
+                        <div class="project-tags">
+                            <span>IoT</span>
+                            <span>Sensor</span>
+                            <span>Arduino</span>
+                        </div>
 
+                        <a
+                            href="https://github.com/takia24/Smart-Hand-Glove-For-Blind"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
+                    </div>
 
-        <h2>Contact</h2>
+                </article>
 
 
-        <div class="contact-card email">
+                <article class="project-card">
 
-            <span>📧 Email</span>
+                    <div class="project-visual cyan">
+                        <div class="project-label">PROJECT 11</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <div class="visual-code">DBMS</div>
+                    </div>
 
-            <a href="mailto:takia0001@std.uftb.ac.bd">
-                takia0001@std.uftb.ac.bd
-            </a>
+                    <div class="project-content">
 
-        </div>
+                        <span class="project-type">Database</span>
 
+                        <h3>
+                            Hospital Management System
+                        </h3>
 
-        <div class="contact-card linkedin">
+                        <p>
+                            Database management project designed to
+                            organize hospital and patient information.
+                        </p>
 
-            <span>💼 LinkedIn</span>
+                        <div class="project-tags">
+                            <span>DBMS</span>
+                            <span>Database</span>
+                            <span>Management</span>
+                        </div>
 
-            <a
-                href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a"
-                target="_blank"
-            >
-                linkedin.com/in/takia-yasmin
-            </a>
+                        <a
+                            href="https://github.com/takia24/Hospital-Management-System-"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
 
-        </div>
+                    </div>
 
-    </section>
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-visual purple">
+                        <div class="project-label">PROJECT 12</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </div>
+                        <div class="visual-code">C / EMBEDDED</div>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">Embedded</span>
+
+                        <h3>
+                            Clap Switch
+                        </h3>
+
+                        <p>
+                            Sound-based light control system using clap
+                            detection and embedded hardware.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>C</span>
+                            <span>Arduino</span>
+                            <span>Embedded</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/takia24/ClapSwitch"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-visual blue">
+                        <div class="project-label">PROJECT 13</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="visual-code">WEB</div>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">Web Development</span>
+
+                        <h3>
+                            Social Media Platform
+                        </h3>
+
+                        <p>
+                            Social media platform project developed during
+                            the CodeAlpha internship.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/takia24/CodeAlpha_SocialMediaPlatform"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-visual cyan">
+                        <div class="project-label">PROJECT 14</div>
+                        <div class="visual-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="visual-code">WEB</div>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-type">Web Development</span>
+
+                        <h3>
+                            Simple E-Commerce Store
+                        </h3>
+
+                        <p>
+                            E-commerce website project developed as part
+                            of the CodeAlpha internship.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/takia24/CodeAlpha_SimpleEcommerceStore"
+                            target="_blank"
+                            class="project-btn"
+                        >
+                            View Project
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="view-all-wrapper">
+
+                <button
+                    class="view-all-btn"
+                    id="viewAllProjects"
+                >
+                    View All Projects
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESEARCH ================= -->
+
+        <section id="research" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>05</span> // RESEARCH
+                </div>
+
+                <h2>Research Publications</h2>
+
+                <p>
+                    Research work, conference presentations, and
+                    academic contributions.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+
+                <article class="research-card">
+
+                    <div class="research-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <span class="research-status published">
+                            Published / Presented
+                        </span>
+
+                        <h3>
+                            HandNav: An IoT-Based Smart Navigation
+                            Glove for Visually Impaired People
+                        </h3>
+
+                        <p>
+                            Presented at the International Conference on
+                            Power Electronics, Communications, Computing,
+                            and Intelligent Infrastructure (PECCII 2026).
+                        </p>
+
+                        <div class="research-meta">
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2026
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                IEEE Xplore
+                            </span>
+                        </div>
+
+                        <a
+                            href="https://lnkd.in/gqdwcHD4"
+                            target="_blank"
+                            class="research-btn"
+                        >
+                            View Paper
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="research-card">
+
+                    <div class="research-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <span class="research-status accepted">
+                            Accepted
+                        </span>
+
+                        <h3>
+                            RSMS: A FreeRTOS-Based Priority-Scheduled
+                            Architecture for Real-Time Multi-Hazard
+                            Detection Using Queue-Driven Task
+                            Communication and Bluetooth Alerting
+                        </h3>
+
+                        <p>
+                            Research work focused on real-time multi-hazard
+                            detection using FreeRTOS task scheduling,
+                            queue-driven communication, and Bluetooth alerts.
+                        </p>
+
+                        <div class="research-meta">
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2026
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-microchip"></i>
+                                FreeRTOS
+                            </span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+
+        <section id="experience" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>06</span> // JOURNEY
+                </div>
+
+                <h2>Experience & Education</h2>
+
+                <p>
+                    My academic journey, research, projects, and
+                    technical development.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2026
+                        </span>
+
+                        <h3>
+                            Research & Conference Presentation
+                        </h3>
+
+                        <h4>
+                            HandNav — PECCII 2026
+                        </h4>
+
+                        <p>
+                            Presented an IoT-based smart navigation glove
+                            research work for visually impaired people.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2026
+                        </span>
+
+                        <h3>
+                            Research Work
+                        </h3>
+
+                        <h4>
+                            RSMS — IEEE CSDE 2026
+                        </h4>
+
+                        <p>
+                            Developed research work around FreeRTOS-based
+                            real-time multi-hazard detection and alerting.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2023 — 2027
+                        </span>
+
+                        <h3>
+                            B.Sc. in Internet of Things and
+                            Robotics Engineering
+                        </h3>
+
+                        <h4>
+                            University of Frontier Technology, Bangladesh
+                        </h4>
+
+                        <p>
+                            Academic focus on IoT, embedded systems,
+                            robotics, automation, artificial intelligence,
+                            and related engineering technologies.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2025
+                        </span>
+
+                        <h3>
+                            Full-Stack Development Internship
+                        </h3>
+
+                        <h4>
+                            CodeAlpha
+                        </h4>
+
+                        <p>
+                            Worked on web development projects including
+                            social media and e-commerce applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHAT I WORK WITH ================= -->
+
+        <section id="services" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>07</span> // TECHNOLOGY
+                </div>
+
+                <h2>What I Work With</h2>
+
+                <p>
+                    Areas where I build, experiment, and develop
+                    technology solutions.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <span class="service-number">01</span>
+
+                    <h3>
+                        IoT & Embedded Systems
+                    </h3>
+
+                    <p>
+                        Connected hardware, sensors, ESP32, Arduino,
+                        embedded programming, and real-time monitoring.
+                    </p>
+
+                    <div class="service-line"></div>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <span class="service-number">02</span>
+
+                    <h3>
+                        AI & Machine Learning
+                    </h3>
+
+                    <p>
+                        Machine learning models, prediction systems,
+                        intelligent classification, and data-driven
+                        applications.
+                    </p>
+
+                    <div class="service-line"></div>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <span class="service-number">03</span>
+
+                    <h3>
+                        Robotics & Automation
+                    </h3>
+
+                    <p>
+                        Sensor-based robotics, automation, navigation,
+                        obstacle detection, and intelligent control.
+                    </p>
+
+                    <div class="service-line"></div>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <span class="service-number">04</span>
+
+                    <h3>
+                        Web & IoT Integration
+                    </h3>
+
+                    <p>
+                        Flask applications, APIs, dashboards, cloud
+                        communication, and hardware-software integration.
+                    </p>
+
+                    <div class="service-line"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VALUE ================= -->
+
+        <section class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>08</span> // VALUE
+                </div>
+
+                <h2>What Drives My Work</h2>
+
+                <p>
+                    The principles that guide how I learn and build.
+                </p>
+
+            </div>
+
+
+            <div class="value-grid">
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Turning practical problems into structured
+                        engineering solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <h3>
+                        Smart Technology
+                    </h3>
+
+                    <p>
+                        Combining hardware, software, sensors, and
+                        intelligence into useful systems.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <h3>
+                        Continuous Learning
+                    </h3>
+
+                    <p>
+                        Exploring new technologies and continuously
+                        improving technical skills.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-earth-asia"></i>
+
+                    <h3>
+                        Real-World Impact
+                    </h3>
+
+                    <p>
+                        Building projects with practical applications
+                        beyond the classroom.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CERTIFICATES ================= -->
+
+        <section id="certificates" class="section-container content-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    <span>09</span> // ACHIEVEMENTS
+                </div>
+
+                <h2>Certificates & Achievements</h2>
+
+                <p>
+                    Selected certifications, participation, and
+                    academic achievements.
+                </p>
+
+            </div>
+
+
+            <div class="certificate-grid">
+
+
+                <!-- 2026 -->
+
+                <article class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
+                    <h3>
+                        Volunteer — WALTON Presents ROBOFUSION 1.0
+                    </h3>
+
+                    <p>
+                        Certificate of Appreciation for valuable
+                        volunteer support.
+                    </p>
+
+                    <a
+                        href="Certificates/Volunteer.pdf"
+                        target="_blank"
+                    >
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
+                    <h3>
+                        WALTON Presents ROBOFUSION 1.0 Techathon
+                    </h3>
+
+                    <p>
+                        Certificate of Participation for active and
+                        enthusiastic participation.
+                    </p>
+
+                    <a
+                        href="Certificates/Techathon.png"
+                        target="_blank"
+                    >
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
+                    <h3>
+                        HandNav — Certificate of Presentation
+                    </h3>
+
+                    <p>
+                        PECCII 2026 presentation certificate for
+                        the HandNav research paper.
+                    </p>
+
+                    <a
+                        href="Certificates/HandGloves_paper_certificate.jpeg"
+                        target="_blank"
+                    >
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="certificate-card">
+
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+
+                    <span class="certificate-year">
+                        2025
+                    </span>
+
+                    <h3>
+                        CodeAlpha Full Stack Development Internship
+                    </h3>
+
+                    <p>
+                        Certificate related to full-stack development
+                        internship experience.
+                    </p>
+
+                    <a
+                        href="Certificates/codealpha_fullstack_internship_2025.jpg"
+                        target="_blank"
+                    >
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <div class="center-button">
+
+                <a
+                    href="certificates.html"
+                    class="secondary-btn"
+                >
+                    View All Certificates
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        <span>10</span> // GET IN TOUCH
+                    </div>
+
+                    <h2>
+                        Let's Build Something Together.
+                    </h2>
+
+                    <p>
+                        Have a project, idea, research collaboration,
+                        or opportunity? Feel free to send me a message.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- Contact Info -->
+
+                    <div class="contact-info glass-card">
+
+                        <h3>
+                            Open for Collaboration
+                        </h3>
+
+                        <p>
+                            Whether you want to discuss an IoT project,
+                            research opportunity, internship, or
+                            collaboration, you can reach out directly.
+                        </p>
+
+
+                        <a
+                            href="mailto:takia0001@std.uftb.ac.bd"
+                            class="contact-item"
+                        >
+
+                            <div class="contact-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <small>DIRECT EMAIL</small>
+                                <strong>
+                                    takia0001@std.uftb.ac.bd
+                                </strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/takia24"
+                            target="_blank"
+                            class="contact-item"
+                        >
+
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+
+                            <div>
+                                <small>CODE REPOSITORIES</small>
+                                <strong>
+                                    github.com/takia24
+                                </strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a"
+                            target="_blank"
+                            class="contact-item"
+                        >
+
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+
+                            <div>
+                                <small>PROFESSIONAL NETWORK</small>
+                                <strong>
+                                    LinkedIn
+                                </strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <div class="contact-item location-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <small>LOCATION</small>
+                                <strong>
+                                    Bangladesh
+                                </strong>
+                            </div>
+
+                            <span class="active-status">
+                                ● Available
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Message Form -->
+
+                    <div class="contact-form-card glass-card">
+
+                        <form id="contactForm">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Your Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="Project Inquiry / Opportunity"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell me about your project, idea, or opportunity..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="send-message-btn"
+                            >
+                                Send Message
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+
+
+                            <p class="form-note">
+                                Your message will be sent directly to my email.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
     <!-- ================= FOOTER ================= -->
+
     <footer>
 
-        <p>
-            © 2026 Takia Yasmin
-        </p>
+        <div class="footer-container">
+
+            <div>
+
+                <a href="#home" class="logo">
+                    TAKIA<span>.</span>
+                </a>
+
+                <p>
+                    IoT • AI • Robotics • Embedded Systems
+                </p>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a
+                    href="https://github.com/takia24"
+                    target="_blank"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/takia-yasmin-b07b0b29a"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a
+                    href="mailto:takia0001@std.uftb.ac.bd"
+                    aria-label="Email"
+                >
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Takia Yasmin. All rights reserved.
+
+        </div>
 
     </footer>
 
-
-    <!-- ================= SCRIPTS ================= -->
-
-    <script src="script.js"></script>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
 
-        // Initialize EmailJS
-        (function () {
-
-            emailjs.init("ZHBv2b9RSlU5ceFaL");
-
-        })();
-
-
-        // Resume Email Notification
-        function sendMail(e) {
-
-            e.preventDefault();
-
-            emailjs.send(
-                "service_na1vmlo",
-                "template_abokmli",
-                {
-                    name: "Portfolio Visitor",
-                    time: new Date().toLocaleString(),
-                    email: "portfolio@visitor.com"
-                }
-            )
-
-            .then(function () {
-
-                alert("Mail sent 😄");
-
-                window.open(
-                    "Takia_Yasmin_Resume.pdf",
-                    "_blank"
-                );
-
-            })
-
-            .catch(function (error) {
-
-                console.log(error);
-
-                alert("Mail failed 😢");
-
-            });
-
-        }
+        emailjs.init("ZHBv2b9RSlU5ceFaL");
 
     </script>
+
+    <script src="script.js"></script>
 
 </body>
 
