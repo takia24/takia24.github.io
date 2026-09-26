@@ -2883,3 +2883,486 @@ footer {
     }
 
 }
+
+
+
+
+/* =========================================================
+   FINAL PORTFOLIO LAYOUT FIX
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ---------- MAIN SECTIONS ---------- */
+
+.hero-container,
+.about-section,
+.skills-section,
+.projects-section,
+.research-section,
+.experience-section,
+.certificates-section,
+.contact-section {
+    width: min(1200px, 92%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+    width: 100%;
+    padding: 80px 0 70px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero-description {
+    max-width: 680px;
+    line-height: 1.8;
+}
+
+.hero-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-location {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.about-main {
+    min-width: 0;
+}
+
+.about-cards {
+    display: grid;
+    gap: 15px;
+}
+
+.info-card {
+    padding: 20px;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    min-height: 150px;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content p {
+    line-height: 1.65;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+
+/* ---------- HIDDEN PROJECTS ---------- */
+
+.hidden-project {
+    display: none;
+}
+
+.hidden-project.show-project {
+    display: flex;
+}
+
+
+/* =========================================================
+   RESEARCH
+   ========================================================= */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.research-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   EXPERIENCE + EDUCATION
+   ========================================================= */
+
+.experience-education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    align-items: start;
+}
+
+.timeline-column {
+    min-width: 0;
+}
+
+.column-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-card {
+    width: 100%;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.timeline-card h3 {
+    line-height: 1.4;
+}
+
+.timeline-card p {
+    line-height: 1.7;
+}
+
+.timeline-card ul {
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.education-result {
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   CERTIFICATES
+   ========================================================= */
+
+.certificate-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.certificate-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background: #0b1020;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.certificate-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.certificate-content h3 {
+    line-height: 1.4;
+}
+
+.certificate-content p {
+    line-height: 1.6;
+}
+
+.certificate-link {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.contact-info,
+.contact-form-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-profile {
+        order: 0;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        padding: 60px 0 50px;
+    }
+
+    .hero-container,
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .research-section,
+    .experience-section,
+    .certificates-section,
+    .contact-section {
+        width: 92%;
+    }
+
+    .profile-circle {
+        width: 190px;
+        height: 190px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .certificate-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-image {
+        height: 220px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
+
+    .nav-links {
+        gap: 10px;
+        justify-content: center;
+    }
+}
