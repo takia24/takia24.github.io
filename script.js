@@ -1,219 +1,379 @@
-/* ================= TYPING EFFECT ================= */
+/* =========================================================
+   TAKIA YASMIN PORTFOLIO
+   MAIN JAVASCRIPT
+========================================================= */
 
-const typingElement = document.getElementById("typing");
 
-const typingTexts = [
-    "IoT & Embedded Systems Developer",
-    "AI & Machine Learning Enthusiast",
-    "Robotics & Automation Enthusiast",
-    "Smart Systems Builder"
-];
+/* =========================================================
+   EMAILJS INITIALIZATION
+========================================================= */
 
-let textIndex = 0;
-let charIndex = 0;
-let deleting = false;
+document.addEventListener("DOMContentLoaded", function () {
 
-function typeEffect() {
+    if (typeof emailjs !== "undefined") {
 
-    if (!typingElement) return;
-
-    const currentText = typingTexts[textIndex];
-
-    if (!deleting) {
-
-        typingElement.textContent =
-            currentText.substring(0, charIndex + 1);
-
-        charIndex++;
-
-        if (charIndex === currentText.length) {
-
-            deleting = true;
-
-            setTimeout(typeEffect, 1600);
-
-            return;
-        }
-
-    } else {
-
-        typingElement.textContent =
-            currentText.substring(0, charIndex - 1);
-
-        charIndex--;
-
-        if (charIndex === 0) {
-
-            deleting = false;
-
-            textIndex =
-                (textIndex + 1) % typingTexts.length;
-
-        }
+        emailjs.init("ZHBv2b9RSlU5ceFaL");
 
     }
 
-    setTimeout(
-        typeEffect,
-        deleting ? 45 : 75
-    );
-
-}
-
-typeEffect();
+});
 
 
+/* =========================================================
+   RESUME / EMAIL NOTIFICATION
+========================================================= */
 
-/* ================= MOBILE MENU ================= */
+function sendMail(event) {
 
-const menuBtn =
-    document.getElementById("menuBtn");
+    if (event) {
+        event.preventDefault();
+    }
 
-const navLinks =
-    document.querySelector(".nav-links");
+    const resumeURL = "Takia_Yasmin_Resume.pdf";
 
-if (menuBtn) {
 
-    menuBtn.addEventListener("click", function () {
+    /* If EmailJS is not loaded,
+       simply open the resume */
 
-        navLinks.classList.toggle("show");
+    if (typeof emailjs === "undefined") {
 
-        const icon =
-            menuBtn.querySelector("i");
+        window.open(resumeURL, "_blank");
 
-        if (navLinks.classList.contains("show")) {
+        return;
 
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
+    }
 
-        } else {
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
+    emailjs.send(
+        "service_na1vmlo",
+        "template_abokmli",
+        {
+            name: "Portfolio Visitor",
+            time: new Date().toLocaleString(),
+            email: "portfolio@visitor.com"
         }
+    )
+
+    .then(function () {
+
+        window.open(resumeURL, "_blank");
+
+    })
+
+    .catch(function (error) {
+
+        console.log("EmailJS Error:", error);
+
+        /* Resume should still open
+           even if email notification fails */
+
+        window.open(resumeURL, "_blank");
 
     });
 
 }
 
 
-/* Close menu after clicking */
+/* =========================================================
+   PROJECT SHOW / HIDE
+========================================================= */
 
-document.querySelectorAll(".nav-link").forEach(
-    link => {
+function toggleProjects() {
 
-        link.addEventListener("click", () => {
+    const hiddenProjects =
+        document.querySelectorAll(".hidden-project");
 
-            navLinks.classList.remove("show");
+    const button =
+        document.getElementById("projectsToggle");
 
-            const icon =
-                menuBtn?.querySelector("i");
 
-            if (icon) {
+    if (!hiddenProjects.length || !button) {
+        return;
+    }
 
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
+
+    const currentlyHidden =
+        hiddenProjects[0].style.display === "none"
+        ||
+        getComputedStyle(hiddenProjects[0]).display === "none";
+
+
+    if (currentlyHidden) {
+
+        /* SHOW ALL */
+
+        hiddenProjects.forEach(function (project) {
+
+            project.style.display = "block";
+
+        });
+
+        button.innerHTML =
+            'Show Less <span>−</span>';
+
+
+    } else {
+
+        /* HIDE AGAIN */
+
+        hiddenProjects.forEach(function (project) {
+
+            project.style.display = "none";
+
+        });
+
+        button.innerHTML =
+            'View All Projects <span>+</span>';
+
+
+        /* Optional: scroll slightly back to project section */
+
+        const projectsSection =
+            document.getElementById("projects");
+
+        if (projectsSection) {
+
+            projectsSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIAL PROJECT STATE
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hiddenProjects =
+        document.querySelectorAll(".hidden-project");
+
+    hiddenProjects.forEach(function (project) {
+
+        project.style.display = "none";
+
+    });
+
+
+    const button =
+        document.getElementById("projectsToggle");
+
+    if (button) {
+
+        button.innerHTML =
+            'View All Projects <span>+</span>';
+
+    }
+
+});
+
+
+/* =========================================================
+   TYPING EFFECT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const typingElement =
+        document.getElementById("typing");
+
+
+    if (!typingElement) {
+        return;
+    }
+
+
+    const typingTexts = [
+
+        "IoT & Embedded Systems Enthusiast",
+
+        "AI & Machine Learning Enthusiast",
+
+        "Robotics & Automation Enthusiast",
+
+        "Smart Systems Developer"
+
+    ];
+
+
+    let textIndex = 0;
+
+    let charIndex = 0;
+
+    let deleting = false;
+
+
+    function typeEffect() {
+
+        const currentText =
+            typingTexts[textIndex];
+
+
+        /* =========================
+           TYPING
+        ========================= */
+
+        if (!deleting) {
+
+            typingElement.textContent =
+                currentText.substring(
+                    0,
+                    charIndex + 1
+                );
+
+            charIndex++;
+
+
+            if (
+                charIndex >=
+                currentText.length
+            ) {
+
+                deleting = true;
+
+                setTimeout(
+                    typeEffect,
+                    1500
+                );
+
+                return;
+
+            }
+
+        }
+
+
+        /* =========================
+           DELETING
+        ========================= */
+
+        else {
+
+            typingElement.textContent =
+                currentText.substring(
+                    0,
+                    charIndex - 1
+                );
+
+            charIndex--;
+
+
+            if (charIndex <= 0) {
+
+                deleting = false;
+
+                textIndex =
+                    (
+                        textIndex + 1
+                    )
+                    %
+                    typingTexts.length;
+
+            }
+
+        }
+
+
+        setTimeout(
+            typeEffect,
+            deleting ? 45 : 85
+        );
+
+    }
+
+
+    typeEffect();
+
+});
+
+
+/* =========================================================
+   NAVBAR ACTIVE LINK
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navLinks =
+        document.querySelectorAll(".nav-links a");
+
+
+    window.addEventListener("scroll", function () {
+
+        let currentSection = "";
+
+
+        sections.forEach(function (section) {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+
+            if (
+                window.scrollY >= sectionTop
+                &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
 
             }
 
         });
 
-    }
-);
+
+        navLinks.forEach(function (link) {
+
+            link.classList.remove("active");
 
 
-
-/* ================= VIEW ALL PROJECTS ================= */
-
-const viewAllButton =
-    document.getElementById("viewAllProjects");
-
-const moreProjects =
-    document.getElementById("moreProjects");
-
-if (viewAllButton && moreProjects) {
-
-    viewAllButton.addEventListener("click", function () {
-
-        moreProjects.classList.toggle("show");
-
-        const icon =
-            viewAllButton.querySelector("i");
-
-        if (moreProjects.classList.contains("show")) {
-
-            viewAllButton.innerHTML =
-                'Show Less Projects <i class="fa-solid fa-minus"></i>';
-
-            moreProjects.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        } else {
-
-            viewAllButton.innerHTML =
-                'View All Projects <i class="fa-solid fa-plus"></i>';
-
-        }
-
-    });
-
-}
+            const href =
+                link.getAttribute("href");
 
 
+            if (
+                href === "#" +
+                currentSection
+            ) {
 
-/* ================= ACTIVE NAVIGATION ================= */
+                link.classList.add("active");
 
-const sections =
-    document.querySelectorAll("section[id]");
+            }
 
-const navItems =
-    document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", function () {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 160;
-
-        if (window.scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (
-            link.getAttribute("href") ===
-            "#" + current
-        ) {
-
-            link.classList.add("active");
-
-        }
+        });
 
     });
 
 });
 
 
+/* =========================================================
+   CONTACT FORM
+========================================================= */
 
-/* ================= CONTACT FORM ================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-const contactForm =
-    document.getElementById("contactForm");
+    const contactForm =
+        document.querySelector(".contact-form");
 
-if (contactForm) {
+
+    if (!contactForm) {
+        return;
+    }
+
 
     contactForm.addEventListener(
         "submit",
@@ -221,55 +381,71 @@ if (contactForm) {
 
             event.preventDefault();
 
-            const button =
+
+            const name =
                 contactForm.querySelector(
-                    ".send-message-btn"
+                    'input[name="name"]'
                 );
 
-            const originalText =
-                button.innerHTML;
+            const email =
+                contactForm.querySelector(
+                    'input[name="email"]'
+                );
 
-            button.innerHTML =
-                'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+            const subject =
+                contactForm.querySelector(
+                    'input[name="subject"]'
+                );
 
-            button.disabled = true;
+            const message =
+                contactForm.querySelector(
+                    'textarea[name="message"]'
+                );
 
 
-            const templateParams = {
+            if (
+                !name ||
+                !email ||
+                !subject ||
+                !message
+            ) {
 
-                from_name:
-                    document.getElementById("name").value,
+                return;
 
-                from_email:
-                    document.getElementById("email").value,
+            }
 
-                subject:
-                    document.getElementById("subject").value,
 
-                message:
-                    document.getElementById("message").value
+            if (
+                typeof emailjs === "undefined"
+            ) {
 
-            };
+                alert(
+                    "Email service is not available right now."
+                );
+
+                return;
+
+            }
 
 
             emailjs.send(
                 "service_na1vmlo",
                 "template_abokmli",
-                templateParams
+                {
+                    name: name.value,
+                    email: email.value,
+                    subject: subject.value,
+                    message: message.value
+                }
             )
 
             .then(function () {
 
                 alert(
-                    "Thank you! Your message has been sent successfully. 😊"
+                    "Message sent successfully! 😊"
                 );
 
                 contactForm.reset();
-
-                button.innerHTML =
-                    originalText;
-
-                button.disabled = false;
 
             })
 
@@ -281,79 +457,12 @@ if (contactForm) {
                 );
 
                 alert(
-                    "Message could not be sent. Please email me directly."
+                    "Message could not be sent. Please try again."
                 );
-
-                button.innerHTML =
-                    originalText;
-
-                button.disabled = false;
 
             });
 
         }
     );
 
-}
-
-
-
-/* ================= RESUME EMAIL ALERT ================= */
-
-function sendResume(event) {
-
-    event.preventDefault();
-
-    const resumeButton =
-        event.currentTarget;
-
-    resumeButton.innerHTML =
-        '<i class="fa-solid fa-spinner fa-spin"></i> Opening...';
-
-
-    const params = {
-
-        name: "Portfolio Visitor",
-
-        time:
-            new Date().toLocaleString(),
-
-        email:
-            "portfolio@visitor.com"
-
-    };
-
-
-    emailjs.send(
-        "service_na1vmlo",
-        "template_abokmli",
-        params
-    )
-
-    .then(function () {
-
-        window.open(
-            "Takia_Yasmin_Resume.pdf",
-            "_blank"
-        );
-
-        resumeButton.innerHTML =
-            '<i class="fa-regular fa-file-lines"></i> CV / Resume';
-
-    })
-
-    .catch(function (error) {
-
-        console.log(error);
-
-        window.open(
-            "Takia_Yasmin_Resume.pdf",
-            "_blank"
-        );
-
-        resumeButton.innerHTML =
-            '<i class="fa-regular fa-file-lines"></i> CV / Resume';
-
-    });
-
-}
+});
